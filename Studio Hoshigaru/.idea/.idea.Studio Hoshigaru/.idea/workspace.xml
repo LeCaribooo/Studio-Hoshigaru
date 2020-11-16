@@ -32,6 +32,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/TEST PA/PlayerControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/TEST PA/Photon/PhotonLobby.cs" />
+        <option value="$PROJECT_DIR$/Assets/TEST PA/Photon/GameSetup.cs" />
+        <option value="$PROJECT_DIR$/Assets/TEST PA/Photon/PhotonRoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/TEST PA/Photon/PhotonPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/TEST PA/Scripts/PlayerControler.cs" />
       </list>
     </option>
   </component>
@@ -55,6 +60,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/TestUnity/Studio Hoshigaru.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\paval\Desktop\TestUnity" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -83,6 +96,8 @@
       <option name="presentableId" value="Default" />
       <updated>1604455963646</updated>
       <workItem from="1604455970827" duration="1943000" />
+      <workItem from="1604521350831" duration="448000" />
+      <workItem from="1605479843665" duration="10705000" />
     </task>
     <servers />
   </component>
@@ -101,8 +116,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1605480183085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605480183085" />
   </component>
 </project>
