@@ -34,7 +34,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
-    - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -101,53 +100,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11260}
     - Class: 114
-      Script: {instanceID: 11288}
+      Script: {instanceID: 11694}
     - Class: 114
-      Script: {instanceID: 11438}
+      Script: {instanceID: 11842}
     - Class: 114
-      Script: {instanceID: 11528}
+      Script: {instanceID: 11932}
     - Class: 114
-      Script: {instanceID: 11542}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 11570}
+      Script: {instanceID: 11974}
     - Class: 114
-      Script: {instanceID: 11680}
+      Script: {instanceID: 12084}
     - Class: 114
-      Script: {instanceID: 12168}
+      Script: {instanceID: 12570}
     - Class: 114
-      Script: {instanceID: 12254}
+      Script: {instanceID: 12656}
     - Class: 114
-      Script: {instanceID: 12428}
+      Script: {instanceID: 12830}
     - Class: 114
-      Script: {instanceID: 12542}
+      Script: {instanceID: 12944}
     - Class: 114
-      Script: {instanceID: 12632}
+      Script: {instanceID: 13034}
     - Class: 114
-      Script: {instanceID: 12918}
+      Script: {instanceID: 13320}
     - Class: 114
-      Script: {instanceID: 13022}
+      Script: {instanceID: 13424}
     - Class: 114
-      Script: {instanceID: 13310}
+      Script: {instanceID: 13710}
     - Class: 114
-      Script: {instanceID: 13408}
+      Script: {instanceID: 13808}
     - Class: 114
-      Script: {instanceID: 13522}
+      Script: {instanceID: 13922}
     - Class: 114
-      Script: {instanceID: 13536}
+      Script: {instanceID: 13936}
     - Class: 114
-      Script: {instanceID: 13860}
+      Script: {instanceID: 14258}
     - Class: 114
-      Script: {instanceID: 13892}
+      Script: {instanceID: 14290}
     - Class: 114
-      Script: {instanceID: 13902}
+      Script: {instanceID: 14300}
     - Class: 114
-      Script: {instanceID: 14090}
+      Script: {instanceID: 14486}
     - Class: 114
-      Script: {instanceID: 14644}
+      Script: {instanceID: 15038}
     - Class: 114
-      Script: {instanceID: 14778}
+      Script: {instanceID: 15172}
     - Class: 114
-      Script: {instanceID: 14816}
+      Script: {instanceID: 15210}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -202,7 +201,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12856}
+      Script: {instanceID: 13258}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -1598,4 +1597,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/TEST PA/Scenes/PhotonLobby.unity
   - Assets/TEST PA/Scenes/TestCharacter.unity
-  playerPath: C:/Users/paval/Desktop/TestUnity/Studio Hoshigaru.exe
+  playerPath: "C:/Users/aur\xE9lia/Desktop/Studio Hoshigaru.exe"

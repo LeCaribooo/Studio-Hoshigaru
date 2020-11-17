@@ -47,7 +47,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     {
         Debug.Log("Trying to create a new Room");
         int randomRoomName = Random.Range(0, 10000);
-        RoomOptions roomOps = new RoomOptions() { IsVisible = true, IsOpen = true, MaxPlayers = 2 };
+        RoomOptions roomOps = new RoomOptions() { IsVisible = true, IsOpen = true, MaxPlayers = 4 };
         PhotonNetwork.CreateRoom("Room " + randomRoomName, roomOps);
         Debug.Log("Created room number : " + randomRoomName);
     }
