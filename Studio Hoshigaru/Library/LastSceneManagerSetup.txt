@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Test Benoit/Scene/Level Test.unity
+- path: Assets/Test Benoit/Scene/Test size.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
