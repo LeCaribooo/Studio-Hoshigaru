@@ -13,17 +13,39 @@ public class PlayerControler : MonoBehaviour
    private float movementInput;      //(-1 ou 1/ Gauche Droite)
    
    private Rigidbody2D rb;
+    public Animator animator;
 
    public bool isGrounded;           //Booléen pour savoir si il est sur le sol
    public Transform groundCheck;     //Coordonnées des pieds du character
    public float checkRadius;         //Radius de check
    public LayerMask whatIsGround;    //Layer qui select quel layer est le ground
 
-   public int extraJumpsValue;
-   private int extraJumps;
+    public Collider2D defaultCollider;
 
-   private bool facingLeft = true;
+    [SerializeField]
+    private PolygonCollider2D[] colliders;
+    private int currentColliderIndex = 0;
+    
+
+    public int extraJumpsValue;
+   private int extraJumps;
    
+   private bool facingRight = true;
+
+    public void SetColliderForSprite(int spriteNum)
+    {
+        colliders[currentColliderIndex].enabled = false;
+        defaultCollider.enabled = false;
+        currentColliderIndex = spriteNum;
+        colliders[currentColliderIndex].enabled = true;
+    }
+
+   public void SetColliderDefault()
+    {
+        colliders[currentColliderIndex].enabled = false;
+        defaultCollider.enabled = true;
+    }
+
     void Start()
     {
         PV = GetComponent<PhotonView>();
@@ -39,14 +61,17 @@ public class PlayerControler : MonoBehaviour
            Move();
         }
 
-        if (facingLeft == false && movementInput < 0)
+        if (facingRight == false && movementInput > 0)
         {
             Flip();
         }
-        else if (facingLeft == true && movementInput > 0)
+        else if (facingRight == true && movementInput < 0)
         {
             Flip();  
         }
+
+        float characterVelocity = Mathf.Abs(rb.velocity.x);
+        animator.SetFloat("Speed", characterVelocity);
     }
     
     private void Update()
@@ -85,7 +110,7 @@ public class PlayerControler : MonoBehaviour
 
     void Flip()
     {
-        facingLeft = !facingLeft;
+        facingRight = !facingRight;
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
