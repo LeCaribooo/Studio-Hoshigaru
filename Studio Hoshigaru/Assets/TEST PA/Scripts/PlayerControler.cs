@@ -21,6 +21,8 @@ public class PlayerControler : MonoBehaviour
 
    public int extraJumpsValue;
    private int extraJumps;
+
+   private bool facingLeft = true;
    
     void Start()
     {
@@ -35,6 +37,15 @@ public class PlayerControler : MonoBehaviour
         if (PV.IsMine)
         {
            Move();
+        }
+
+        if (facingLeft == false && movementInput < 0)
+        {
+            Flip();
+        }
+        else if (facingLeft == true && movementInput > 0)
+        {
+            Flip();  
         }
     }
     
@@ -70,5 +81,13 @@ public class PlayerControler : MonoBehaviour
         
         movementInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(movementInput * movementSpeed, rb.velocity.y); //Déplace le rigibody 
+    }
+
+    void Flip()
+    {
+        facingLeft = !facingLeft;
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
     }
 }

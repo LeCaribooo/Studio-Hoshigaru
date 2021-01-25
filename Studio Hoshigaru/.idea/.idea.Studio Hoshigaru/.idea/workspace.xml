@@ -32,9 +32,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/TEST PA/PlayerControler.cs" />
-        <option value="$PROJECT_DIR$/Assets/TEST PA/Photon/PhotonLobby.cs" />
         <option value="$PROJECT_DIR$/Assets/TEST PA/Photon/GameSetup.cs" />
         <option value="$PROJECT_DIR$/Assets/TEST PA/Photon/PhotonRoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/TEST PA/Photon/PhotonLobby.cs" />
         <option value="$PROJECT_DIR$/Assets/TEST PA/Photon/PhotonPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/TEST PA/Scripts/PlayerControler.cs" />
       </list>
@@ -56,7 +56,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.CSharpInteractiveConfiguration" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -98,6 +98,10 @@
       <workItem from="1604455970827" duration="1943000" />
       <workItem from="1604521350831" duration="448000" />
       <workItem from="1605479843665" duration="10705000" />
+      <workItem from="1605569824232" duration="596000" />
+      <workItem from="1605606826456" duration="74000" />
+      <workItem from="1605648921226" duration="1100000" />
+      <workItem from="1606134669682" duration="1640000" />
     </task>
     <servers />
   </component>
@@ -122,9 +126,13 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="616" y="240" key="run.anything.popup" timestamp="1605480183085">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1606135772770">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605480183085" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606135772770" />
+    <state x="1052" y="138" key="run.anything.popup" timestamp="1605606897723">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1052" y="138" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605606897723" />
   </component>
 </project>
