@@ -56,6 +56,7 @@ public class PlayerControler : MonoBehaviour
     
     void FixedUpdate()
     {
+        PhotonView photonView = PhotonView.Get(this);
         if (PV.IsMine)
         {
            Move();
@@ -63,11 +64,11 @@ public class PlayerControler : MonoBehaviour
 
         if (facingRight == false && movementInput > 0)
         {
-            Flip();
+            photonView.RPC("Flip", RpcTarget.All);
         }
         else if (facingRight == true && movementInput < 0)
         {
-            Flip();  
+            photonView.RPC("Flip", RpcTarget.All);
         }
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
@@ -107,7 +108,8 @@ public class PlayerControler : MonoBehaviour
         movementInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(movementInput * movementSpeed, rb.velocity.y); //Déplace le rigibody 
     }
-
+    
+    [PunRPC]
     void Flip()
     {
         facingRight = !facingRight;
