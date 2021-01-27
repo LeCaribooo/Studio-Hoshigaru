@@ -6,41 +6,38 @@ using Photon.Pun;
 
 public class PlayerControler : MonoBehaviour
 {
-    private PhotonView PV;
+   private PhotonView PV;
     
    public float movementSpeed;       //Speed du joueur
    public float jumpForce;           //Puissance de saut
    private float movementInput;      //(-1 ou 1/ Gauche Droite)
    
    private Rigidbody2D rb;
-    public Animator animator;
+   public Animator animator;
+   private Collider2D hitbox;
 
    public bool isGrounded;           //Booléen pour savoir si il est sur le sol
    public Transform groundCheck;     //Coordonnées des pieds du character
    public float checkRadius;         //Radius de check
    public LayerMask whatIsGround;    //Layer qui select quel layer est le ground
-
-    
-    
-
-    public int extraJumpsValue;
+ 
+   public int extraJumpsValue;
    private int extraJumps;
    
    private bool facingRight = true;
-
-    
+   
 
     void Start()
     {
         PV = GetComponent<PhotonView>();
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
+        hitbox = GetComponent<CapsuleCollider2D>();
     }
 
     
     void FixedUpdate()
     {
-        PhotonView photonView = PhotonView.Get(this);
         if (PV.IsMine)
         {
            Move();
@@ -48,11 +45,11 @@ public class PlayerControler : MonoBehaviour
 
         if (facingRight == false && movementInput > 0)
         {
-            photonView.RPC("Flip", RpcTarget.All);
+            PV.RPC("Flip", RpcTarget.All);
         }
         else if (facingRight == true && movementInput < 0)
         {
-            photonView.RPC("Flip", RpcTarget.All);
+            PV.RPC("Flip", RpcTarget.All);
         }
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
@@ -100,5 +97,13 @@ public class PlayerControler : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Physics2D.IgnoreCollision(hitbox, other);
+        }
     }
 }

@@ -17,8 +17,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
     PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PhotonRigidbody2DViewEditor
-    - Photon.Pun.PhotonViewInspector
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
@@ -36,7 +34,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
-    - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -76,11 +73,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
-    - Class: 61
-      Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
     - Class: 65
+      Script: {instanceID: 0}
+    - Class: 70
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -103,53 +100,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11260}
     - Class: 114
-      Script: {instanceID: 11290}
+      Script: {instanceID: 11288}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11438}
     - Class: 114
-      Script: {instanceID: 11530}
+      Script: {instanceID: 11528}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11542}
     - Class: 114
-      Script: {instanceID: 11572}
+      Script: {instanceID: 11570}
     - Class: 114
-      Script: {instanceID: 11682}
+      Script: {instanceID: 11680}
     - Class: 114
-      Script: {instanceID: 12170}
+      Script: {instanceID: 12168}
     - Class: 114
-      Script: {instanceID: 12256}
+      Script: {instanceID: 12254}
     - Class: 114
-      Script: {instanceID: 12430}
+      Script: {instanceID: 12428}
     - Class: 114
-      Script: {instanceID: 12544}
+      Script: {instanceID: 12542}
     - Class: 114
-      Script: {instanceID: 12634}
+      Script: {instanceID: 12632}
     - Class: 114
-      Script: {instanceID: 12920}
+      Script: {instanceID: 12918}
     - Class: 114
-      Script: {instanceID: 13024}
+      Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 13312}
+      Script: {instanceID: 13310}
     - Class: 114
-      Script: {instanceID: 13410}
+      Script: {instanceID: 13408}
     - Class: 114
-      Script: {instanceID: 13524}
+      Script: {instanceID: 13522}
     - Class: 114
-      Script: {instanceID: 13538}
+      Script: {instanceID: 13536}
     - Class: 114
-      Script: {instanceID: 13862}
+      Script: {instanceID: 13860}
     - Class: 114
-      Script: {instanceID: 13894}
+      Script: {instanceID: 13892}
     - Class: 114
-      Script: {instanceID: 13904}
+      Script: {instanceID: 13902}
     - Class: 114
-      Script: {instanceID: 14092}
+      Script: {instanceID: 14090}
     - Class: 114
-      Script: {instanceID: 14646}
+      Script: {instanceID: 14644}
     - Class: 114
-      Script: {instanceID: 14780}
+      Script: {instanceID: 14778}
     - Class: 114
-      Script: {instanceID: 14818}
+      Script: {instanceID: 14816}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -204,7 +201,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12858}
+      Script: {instanceID: 12856}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -782,7 +779,7 @@ ScriptsOnlyBuild:
     className: CurrentRoomPlayerTtlProperty
   - hash:
       serializedVersion: 2
-      Hash: 15cb8758051ef5f58f21fd45f1a05169
+      Hash: 55c276e13727e663b6158f75f229c297
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerControler
