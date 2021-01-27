@@ -20,11 +20,7 @@ public class PlayerControler : MonoBehaviour
    public float checkRadius;         //Radius de check
    public LayerMask whatIsGround;    //Layer qui select quel layer est le ground
 
-    public Collider2D defaultCollider;
-
-    [SerializeField]
-    private PolygonCollider2D[] colliders;
-    private int currentColliderIndex = 0;
+    
     
 
     public int extraJumpsValue;
@@ -32,19 +28,7 @@ public class PlayerControler : MonoBehaviour
    
    private bool facingRight = true;
 
-    public void SetColliderForSprite(int spriteNum)
-    {
-        colliders[currentColliderIndex].enabled = false;
-        defaultCollider.enabled = false;
-        currentColliderIndex = spriteNum;
-        colliders[currentColliderIndex].enabled = true;
-    }
-
-   public void SetColliderDefault()
-    {
-        colliders[currentColliderIndex].enabled = false;
-        defaultCollider.enabled = true;
-    }
+    
 
     void Start()
     {
