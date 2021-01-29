@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":0.8376665115356445,"y":-0.6450109481811523,"z":-3.2031943798065187},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":9.26325511932373,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":446.8871765136719,"y":451.7629089355469,"z":-169.56280517578126},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":164.60621643066407,"orthographic":true}
+>>>>>>> TileSheet

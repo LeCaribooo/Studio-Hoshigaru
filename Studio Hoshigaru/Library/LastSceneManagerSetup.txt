@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/PhotonLobby.unity
+=======
+- path: Assets/Test Benoit/Skill Tree/Scene/Skill Tree Menu.unity
+>>>>>>> TileSheet
   isLoaded: 1
   isActive: 1
   isSubScene: 0
