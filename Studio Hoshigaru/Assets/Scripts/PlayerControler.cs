@@ -6,31 +6,45 @@ using Photon.Pun;
 
 public class PlayerControler : MonoBehaviour
 {
-   private PhotonView PV;
-    
-   public float movementSpeed;       //Speed du joueur
-   public float jumpForce;           //Puissance de saut
-   private float movementInput;      //(-1 ou 1/ Gauche Droite)
-   
-   private Rigidbody2D rb;
-   public Animator animator;
-   private Collider2D hitbox;
+    public PlayerSO playerSO;
 
-   public bool isGrounded;           //Booléen pour savoir si il est sur le sol
-   public Transform groundCheck;     //Coordonnées des pieds du character
-   public float checkRadius;         //Radius de check
-   public LayerMask whatIsGround;    //Layer qui select quel layer est le ground
+    private PhotonView PV;
+
+    private float movementSpeed;       //Speed du joueur
+    private float jumpForce;           //Puissance de saut
+    private float movementInput;      //(-1 ou 1/ Gauche Droite)
+   
+    private Rigidbody2D rb;
+    public Animator animator;
+    private Collider2D hitbox;
+
+    private bool isGrounded;           //Booléen pour savoir si il est sur le sol
+    public Transform groundCheck;     //Coordonnées des pieds du character
+    private float checkRadius;         //Radius de check
+    private LayerMask whatIsGround;    //Layer qui select quel layer est le ground
  
-   public int extraJumpsValue;
-   private int extraJumps;
+    private int extraJumpsValue;
+    private int extraJumps;
     
-   private bool facingRight = true;
+    private bool facingRight = true;
 
-    public Canvas UI;
+    private Canvas UI;
    
+    void PlayerSO()
+    {
+        UI = playerSO.UI;
+        movementSpeed = playerSO.movementSpeed;
+        jumpForce = playerSO.jumpForce;
+        isGrounded = playerSO.isGrounded;
+        checkRadius = playerSO.checkRadius;
+        whatIsGround = playerSO.whatIsGround;
+        extraJumpsValue = playerSO.extraJumpsValue;
+    }
+
 
     void Start()
     {
+        PlayerSO();
         PV = GetComponent<PhotonView>();
         if (!PV.IsMine)
         {
@@ -74,6 +88,7 @@ public class PlayerControler : MonoBehaviour
     {
         if (isGrounded == true)
         {
+            Debug.Log("On est au sol !");
             extraJumps = extraJumpsValue;
         }
         if (Input.GetButtonDown("Jump") && extraJumps > 0)

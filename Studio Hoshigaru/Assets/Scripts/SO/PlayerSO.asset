@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e430228b5fea2db44af2c35c65102f99, type: 3}
+  m_Name: PlayerSO
+  m_EditorClassIdentifier: 
+  animator: {fileID: -5369199426318173991, guid: df23e5c1b60471c478974b10f86ad104,
+    type: 3}
+  movementSpeed: 4
+  jumpForce: 6
+  numOfHearts: 3
+  UI: {fileID: 409648138822584120, guid: 893ec17962ccea849889e20887d50aab, type: 3}
+  extraJumpsValue: 1
+  isGrounded: 0
+  checkRadius: 0.1
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256

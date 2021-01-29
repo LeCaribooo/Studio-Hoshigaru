@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public int numOfHearts;
-    public int numOfHits;
+    public PlayerSO playerSO;
+
+    private int numOfHearts;
+    private int numOfHits;
 
     public Image[] hearts;
     public Sprite emptyHeart;
@@ -17,6 +19,7 @@ public class Health : MonoBehaviour
 
     void Start()
     {
+        numOfHearts = playerSO.numOfHearts;
         numOfHits = numOfHearts * 4;
     }
 
