@@ -38,7 +38,7 @@ public class TalentTree : MonoBehaviour
 
     public void TryUseTalent(Talent talent)
     {
-        if (MyPoint > 0)
+        if (MyPoint > 0 && talent.Click())
         {
             MyPoint --;
         }
@@ -46,6 +46,8 @@ public class TalentTree : MonoBehaviour
 
     private void ResetTalents()
     {
+        UpdateTalentPointText();
+
         foreach (Talent talent in talents)
         {
             talent.Lock();
@@ -59,6 +61,6 @@ public class TalentTree : MonoBehaviour
 
     private void UpdateTalentPointText()
     {
-        talentPointText.text = points.ToString();
+        talentPointText.text = " "+ points.ToString();
     }
 }
