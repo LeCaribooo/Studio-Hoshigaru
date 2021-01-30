@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e430228b5fea2db44af2c35c65102f99, type: 3}
   m_Name: PlayerSO
   m_EditorClassIdentifier: 
-  animator: {fileID: -5369199426318173991, guid: df23e5c1b60471c478974b10f86ad104,
-    type: 3}
   movementSpeed: 4
   jumpForce: 6
   numOfHearts: 3

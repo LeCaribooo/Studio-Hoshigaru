@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/PhotonLobby.unity
-=======
-- path: Assets/Test Benoit/Skill Tree/Scene/Skill Tree Menu.unity
->>>>>>> TileSheet
+- path: Assets/TEST KERIAN/Scenes/TestCharacter.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
