@@ -29,6 +29,8 @@ public class PlayerControler : MonoBehaviour
     private bool facingRight = true;
 
     private Canvas UI;
+
+    private CameraPlayer cameraPlayer;
    
     void PlayerSO()
     {
@@ -56,6 +58,7 @@ public class PlayerControler : MonoBehaviour
     }
 
     
+
     void FixedUpdate()
     {
         if (PV.IsMine)
@@ -88,7 +91,6 @@ public class PlayerControler : MonoBehaviour
     {
         if (isGrounded == true)
         {
-            Debug.Log("On est au sol !");
             extraJumps = extraJumpsValue;
         }
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
