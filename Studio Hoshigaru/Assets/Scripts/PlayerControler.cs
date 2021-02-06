@@ -26,6 +26,9 @@ public class PlayerControler : MonoBehaviour
     private int extraJumpsValue;
     private int extraJumps;
     
+    private int attackStatus = 0;
+    private int time = 0;
+
     private bool facingRight = true;
 
     private Canvas UI;
@@ -77,16 +80,50 @@ public class PlayerControler : MonoBehaviour
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
+        
     }
     
     private void Update()
     {
+        Debug.Log(time);
         if (PV.IsMine)
         {
             Jump();
         }
+
+        if (attackStatus != 0)
+        {
+            time += 1;
+        }
+
+
+        if (Input.GetMouseButtonDown(0) && attackStatus == 0)
+        {
+            attackStatus += 1;
+            animator.SetInteger("AttackStatus", attackStatus);
+        }
+        else if (Input.GetMouseButtonDown(0) && attackStatus == 1 && time > 50)
+        {
+            time = 0;
+            attackStatus += 1;
+            animator.SetInteger("AttackStatus", attackStatus);
+
+        }
+        else if(Input.GetMouseButtonDown(0) && attackStatus == 2 && time > 50)
+        {
+            time = 0;
+            attackStatus -=1;
+            animator.SetInteger("AttackStatus", attackStatus);
+
+        }
+        else if (time > 300)
+        {
+            time = 0;
+            attackStatus = 0;
+            animator.SetInteger("AttackStatus", attackStatus);
+        }
     }
-    
+
     void Jump()
     {
         if (isGrounded == true)
