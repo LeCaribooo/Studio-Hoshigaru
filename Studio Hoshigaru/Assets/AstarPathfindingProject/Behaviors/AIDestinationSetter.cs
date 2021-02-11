@@ -18,6 +18,25 @@ namespace Pathfinding {
 		public Transform target;
 		IAstarAI ai;
 
+		private GameObject[] players;
+
+		public Transform whichTarget()
+        {
+		players = GameObject.FindGameObjectsWithTag("Player");
+			float minDist = Mathf.Infinity;
+			GameObject currCloser = players[0];
+			foreach (GameObject player in players)
+			{
+				float distance = Vector3.Distance(this.transform.position, player.transform.position);
+				if (distance < minDist)
+				{
+					currCloser = player;
+					minDist = distance;
+				}
+			}
+			return currCloser.transform;
+		}
+
 		void OnEnable () {
 			ai = GetComponent<IAstarAI>();
 			// Update the destination right before searching for a path as well.
@@ -33,6 +52,7 @@ namespace Pathfinding {
 
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () {
+			target = whichTarget();
 			if (target != null && ai != null) ai.destination = target.position;
 		}
 	}
