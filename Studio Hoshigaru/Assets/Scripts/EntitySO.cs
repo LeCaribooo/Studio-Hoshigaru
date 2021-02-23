@@ -10,4 +10,5 @@ public class EntitySO : ScriptableObject
     public float jumpForce;   
 
     public int numOfHearts;
+    public int numOfHits;
 }
