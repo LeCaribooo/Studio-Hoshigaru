@@ -20,8 +20,11 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+<<<<<<< HEAD
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
+=======
+>>>>>>> main
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbody2DView
@@ -32,6 +35,7 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
@@ -135,6 +139,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12546}
     - Class: 114
       Script: {instanceID: 12636}
+<<<<<<< HEAD
     - Class: 114
       Script: {instanceID: 12922}
     - Class: 114
@@ -167,6 +172,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14792}
     - Class: 114
       Script: {instanceID: 14830}
+=======
+    - Class: 114
+      Script: {instanceID: 12922}
+    - Class: 114
+      Script: {instanceID: 13026}
+    - Class: 114
+      Script: {instanceID: 13314}
+    - Class: 114
+      Script: {instanceID: 13412}
+    - Class: 114
+      Script: {instanceID: 13526}
+    - Class: 114
+      Script: {instanceID: 13542}
+    - Class: 114
+      Script: {instanceID: 13868}
+    - Class: 114
+      Script: {instanceID: 13900}
+    - Class: 114
+      Script: {instanceID: 13908}
+    - Class: 114
+      Script: {instanceID: 13912}
+    - Class: 114
+      Script: {instanceID: 14100}
+    - Class: 114
+      Script: {instanceID: 14606}
+    - Class: 114
+      Script: {instanceID: 14656}
+    - Class: 114
+      Script: {instanceID: 14790}
+    - Class: 114
+      Script: {instanceID: 14828}
+>>>>>>> main
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -237,9 +274,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12860}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 13534}
     - Class: 114
       Script: {instanceID: 14792}
+=======
+      Script: {instanceID: 13532}
+    - Class: 114
+      Script: {instanceID: 14790}
+>>>>>>> main
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -609,7 +652,11 @@ ScriptsOnlyBuild:
     className: PhotonHandler
   - hash:
       serializedVersion: 2
+<<<<<<< HEAD
       Hash: af25e393e025ec6fe0c14a739368cb46
+=======
+      Hash: 331fdacb1a6db8daf8af482605e129fd
+>>>>>>> main
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EntitySO
@@ -837,7 +884,11 @@ ScriptsOnlyBuild:
     className: CurrentRoomPlayerTtlProperty
   - hash:
       serializedVersion: 2
+<<<<<<< HEAD
       Hash: 3d0d2f4afaaa66b5977c7027f2bf26de
+=======
+      Hash: 7d9eb4fd66e6bc7ea1abf672a0a78562
+>>>>>>> main
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerControler
@@ -1287,7 +1338,11 @@ ScriptsOnlyBuild:
     className: PlayerManager
   - hash:
       serializedVersion: 2
+<<<<<<< HEAD
       Hash: 1938657d26ecdfba240c330ae39a18ee
+=======
+      Hash: 86f09649b1d22af91692fd97fccfb539
+>>>>>>> main
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerSO
@@ -1497,7 +1552,11 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
+<<<<<<< HEAD
       Hash: a13bb0153e411cc4499a81d6664c53f3
+=======
+      Hash: 767614b0ae1684e4510a7018af9a956b
+>>>>>>> main
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Health
@@ -1685,4 +1744,9 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/PhotonLobby.unity
   - Assets/TEST KERIAN/Scenes/TestCharacter.unity
+<<<<<<< HEAD
   playerPath: C:/Users/paval/Desktop/TestUnity/Studio Hoshigaru.exe
+=======
+  playerPath: C:/Users/Aurelia/Documents/projet studio hoshigaru/Studio-Hoshigaru/build/Studio
+    Hoshigaru.exe
+>>>>>>> main

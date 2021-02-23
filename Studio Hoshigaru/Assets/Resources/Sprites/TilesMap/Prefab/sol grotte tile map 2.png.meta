@@ -1,0 +1,1640 @@
+fileFormatVersion: 2
+guid: 125d9b35e6985274da0ff785f6a627ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2043291534516057217
+    second: sol grotte tile map 2_0
+  - first:
+      213: -3816477224460861189
+    second: sol grotte tile map 2_1
+  - first:
+      213: -7515291875130934101
+    second: sol grotte tile map 2_2
+  - first:
+      213: 860720776339557058
+    second: sol grotte tile map 2_3
+  - first:
+      213: 5317828786712065528
+    second: sol grotte tile map 2_4
+  - first:
+      213: 4576104052119536489
+    second: sol grotte tile map 2_5
+  - first:
+      213: -8571806262581995399
+    second: sol grotte tile map 2_6
+  - first:
+      213: 4897261913593411297
+    second: sol grotte tile map 2_7
+  - first:
+      213: 8616657636010612181
+    second: sol grotte tile map 2_8
+  - first:
+      213: 7160700091222853993
+    second: sol grotte tile map 2_9
+  - first:
+      213: -7797253692720284741
+    second: sol grotte tile map 2_10
+  - first:
+      213: 360749709603239666
+    second: sol grotte tile map 2_11
+  - first:
+      213: 7286960177433454239
+    second: sol grotte tile map 2_12
+  - first:
+      213: 6767563142479052050
+    second: sol grotte tile map 2_13
+  - first:
+      213: -3706637583689763516
+    second: sol grotte tile map 2_14
+  - first:
+      213: 2825606399700119818
+    second: sol grotte tile map 2_15
+  - first:
+      213: 4248126820674541130
+    second: sol grotte tile map 2_16
+  - first:
+      213: 5949071892075649030
+    second: sol grotte tile map 2_17
+  - first:
+      213: -6288493638509822256
+    second: sol grotte tile map 2_18
+  - first:
+      213: -5132708754324562440
+    second: sol grotte tile map 2_19
+  - first:
+      213: 4595116289546215632
+    second: sol grotte tile map 2_20
+  - first:
+      213: -106568422298051034
+    second: sol grotte tile map 2_21
+  - first:
+      213: -5981185257541395863
+    second: sol grotte tile map 2_22
+  - first:
+      213: 8845270607005664325
+    second: sol grotte tile map 2_23
+  - first:
+      213: 6813251906546303231
+    second: sol grotte tile map 2_24
+  - first:
+      213: -943865825329736038
+    second: sol grotte tile map 2_25
+  - first:
+      213: -4440771298616264656
+    second: sol grotte tile map 2_26
+  - first:
+      213: 7074994404939464310
+    second: sol grotte tile map 2_27
+  - first:
+      213: -2697812716884396705
+    second: sol grotte tile map 2_28
+  - first:
+      213: -1080963994532746922
+    second: sol grotte tile map 2_29
+  - first:
+      213: -8234719973442671859
+    second: sol grotte tile map 2_30
+  - first:
+      213: -8218449282383681596
+    second: sol grotte tile map 2_31
+  - first:
+      213: -3306077000959142234
+    second: sol grotte tile map 2_32
+  - first:
+      213: -8881785220913810278
+    second: sol grotte tile map 2_33
+  - first:
+      213: 5918228216187670073
+    second: sol grotte tile map 2_34
+  - first:
+      213: 5418539807752371502
+    second: sol grotte tile map 2_35
+  - first:
+      213: 887707391584175092
+    second: sol grotte tile map 2_36
+  - first:
+      213: -4276401075320169926
+    second: sol grotte tile map 2_37
+  - first:
+      213: 2631703823459454138
+    second: sol grotte tile map 2_38
+  - first:
+      213: -7735165036696054747
+    second: sol grotte tile map 2_39
+  - first:
+      213: 2636460537932069014
+    second: sol grotte tile map 2_40
+  - first:
+      213: -3855778729568760331
+    second: sol grotte tile map 2_41
+  - first:
+      213: -2939862475544504750
+    second: sol grotte tile map 2_42
+  - first:
+      213: 8017597691083436160
+    second: sol grotte tile map 2_43
+  - first:
+      213: 8032333609846658065
+    second: sol grotte tile map 2_44
+  - first:
+      213: 2445301516922526776
+    second: sol grotte tile map 2_45
+  - first:
+      213: 4003318608408287716
+    second: sol grotte tile map 2_46
+  - first:
+      213: 131883233144592220
+    second: sol grotte tile map 2_47
+  - first:
+      213: -6915970772205975252
+    second: sol grotte tile map 2_48
+  - first:
+      213: -1975857484713891758
+    second: sol grotte tile map 2_49
+  - first:
+      213: 5965621624846076801
+    second: sol grotte tile map 2_50
+  - first:
+      213: -8294695622368303651
+    second: sol grotte tile map 2_51
+  - first:
+      213: 9118198672810033876
+    second: sol grotte tile map 2_52
+  - first:
+      213: -8161468454927377943
+    second: sol grotte tile map 2_53
+  - first:
+      213: -863750402760316612
+    second: sol grotte tile map 2_54
+  - first:
+      213: 901200312011940832
+    second: sol grotte tile map 2_55
+  - first:
+      213: -3481658970948828348
+    second: sol grotte tile map 2_56
+  - first:
+      213: 4344521879653103241
+    second: sol grotte tile map 2_57
+  - first:
+      213: -2985258959430487184
+    second: sol grotte tile map 2_58
+  - first:
+      213: 7916257279033362106
+    second: sol grotte tile map 2_59
+  - first:
+      213: 4186271798785375767
+    second: sol grotte tile map 2_60
+  - first:
+      213: -8426423535469074378
+    second: sol grotte tile map 2_61
+  - first:
+      213: -4583881283215131227
+    second: sol grotte tile map 2_62
+  - first:
+      213: -2544876063510696345
+    second: sol grotte tile map 2_63
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sol grotte tile map 2_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 926
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b8b98dc25c4a3e0800000000000000
+      internalID: -2043291534516057217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 926
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf044a65f26290bc0800000000000000
+      internalID: -3816477224460861189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_2
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 926
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bacf0777bd154b790800000000000000
+      internalID: -7515291875130934101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_3
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 926
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca848c5cf4e1fb00800000000000000
+      internalID: 860720776339557058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_4
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 926
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5b1504b19bcc940800000000000000
+      internalID: 5317828786712065528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_5
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 926
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9638fc1e366918f30800000000000000
+      internalID: 4576104052119536489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_6
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 926
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978d45b9e93da0980800000000000000
+      internalID: -8571806262581995399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_7
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 926
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6f8cb73c196f340800000000000000
+      internalID: 4897261913593411297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 794
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5d1998774849770800000000000000
+      internalID: 8616657636010612181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_9
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 794
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96902704bcaef5360800000000000000
+      internalID: 7160700091222853993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_10
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 794
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbfdcdf3179ac390800000000000000
+      internalID: -7797253692720284741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_11
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 794
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6f9b513f3a10500800000000000000
+      internalID: 360749709603239666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_12
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 794
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96a6546cab702560800000000000000
+      internalID: 7286960177433454239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_13
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 794
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d7d7e62d63bed50800000000000000
+      internalID: 6767563142479052050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_14
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 794
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4453f0991c06f8cc0800000000000000
+      internalID: -3706637583689763516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_15
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 794
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a013231cc02963720800000000000000
+      internalID: 2825606399700119818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 662
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a469d1bf5d064fa30800000000000000
+      internalID: 4248126820674541130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_17
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 662
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6081e66cd595f8250800000000000000
+      internalID: 5949071892075649030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_18
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 662
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de71588a58cab8a0800000000000000
+      internalID: -6288493638509822256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_19
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 662
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd52fa0594f4c8b0800000000000000
+      internalID: -5132708754324562440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_20
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 662
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0630c5be125cf30800000000000000
+      internalID: 4595116289546215632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_21
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 662
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e96a4a594658ef0800000000000000
+      internalID: -106568422298051034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_22
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 662
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a117ca2bf8efca0800000000000000
+      internalID: -5981185257541395863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_23
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 662
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544c6c8b0c6b0ca70800000000000000
+      internalID: 8845270607005664325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 530
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff002f6c2888d8e50800000000000000
+      internalID: 6813251906546303231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_25
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 530
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96179d5807b6e2f0800000000000000
+      internalID: -943865825329736038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_26
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 530
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0383a3938063f52c0800000000000000
+      internalID: -4440771298616264656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_27
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 530
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67efa462ded6f2260800000000000000
+      internalID: 7074994404939464310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_28
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 530
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55f29ba0a17f8ad0800000000000000
+      internalID: -2697812716884396705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_29
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 530
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65963e269f4aff0f0800000000000000
+      internalID: -1080963994532746922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_30
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 530
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ba22640d568bd80800000000000000
+      internalID: -8234719973442671859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_31
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 530
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7e4febbe332fd80800000000000000
+      internalID: -8218449282383681596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_32
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 398
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6ddb5eb747e12d0800000000000000
+      internalID: -3306077000959142234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_33
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 398
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a943e18366f8db480800000000000000
+      internalID: -8881785220913810278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_34
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 398
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e4f8dd435c12250800000000000000
+      internalID: 5918228216187670073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_35
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 398
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2db46a1f35823b40800000000000000
+      internalID: 5418539807752371502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_36
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 398
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f30ddb5b25c15c00800000000000000
+      internalID: 887707391584175092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_37
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 398
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a517c11eb27a4c0800000000000000
+      internalID: -4276401075320169926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_38
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 398
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc865f1fa0b58420800000000000000
+      internalID: 2631703823459454138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_39
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 398
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524d5bcb16c27a490800000000000000
+      internalID: -7735165036696054747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_40
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698b6c304e6969420800000000000000
+      internalID: 2636460537932069014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_41
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd0c8b9ca58d7ac0800000000000000
+      internalID: -3855778729568760331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_42
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2565ba097a28337d0800000000000000
+      internalID: -2939862475544504750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_43
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0803509fe9a344f60800000000000000
+      internalID: 8017597691083436160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_44
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114575c6cd4987f60800000000000000
+      internalID: 8032333609846658065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_45
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c14ec16c47fe120800000000000000
+      internalID: 2445301516922526776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_46
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e913e85015ae8730800000000000000
+      internalID: 4003318608408287716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_47
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57d96f0a1b84d100800000000000000
+      internalID: 131883233144592220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_48
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 134
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29cdad99398500a0800000000000000
+      internalID: -6915970772205975252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_49
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 134
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258e4d016185494e0800000000000000
+      internalID: -1975857484713891758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_50
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 134
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18bc655b2452ac250800000000000000
+      internalID: 5965621624846076801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_51
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 134
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5efb4574253ec80800000000000000
+      internalID: -8294695622368303651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_52
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 134
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2c744f1695a8e70800000000000000
+      internalID: 9118198672810033876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_53
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 134
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e95f7a7ea3acbe80800000000000000
+      internalID: -8161468454927377943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_54
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 134
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39eed4c5975304f0800000000000000
+      internalID: -863750402760316612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_55
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 134
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e361f4b8e4b18c00800000000000000
+      internalID: 901200312011940832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_56
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4430b8fcc99aeafc0800000000000000
+      internalID: -3481658970948828348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_57
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 2
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986b2ab91a7da4c30800000000000000
+      internalID: 4344521879653103241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_58
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 2
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073f7900bca3296d0800000000000000
+      internalID: -2985258959430487184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_59
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 2
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6426b9d023cdd60800000000000000
+      internalID: 7916257279033362106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_60
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 2
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e76db6500a81a30800000000000000
+      internalID: 4186271798785375767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_61
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 2
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638ef5980745f0b80800000000000000
+      internalID: -8426423535469074378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_62
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 2
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad76656248c260c0800000000000000
+      internalID: -4583881283215131227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sol grotte tile map 2_63
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 2
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76eec0d14b8ceacd0800000000000000
+      internalID: -2544876063510696345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

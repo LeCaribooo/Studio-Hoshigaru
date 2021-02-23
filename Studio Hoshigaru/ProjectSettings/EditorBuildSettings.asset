@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PhotonLobby.unity
+    path: Assets/Resources/Sprites/TilesMap/Scenes/PhotonLobby.unity
     guid: 5dbe157d6f7ad314e859039d600f9869
   - enabled: 1
     path: Assets/TEST KERIAN/Scenes/TestCharacter.unity
