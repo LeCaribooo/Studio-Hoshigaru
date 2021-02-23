@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     public PlayerSO playerSO;
 
     private int numOfHearts;
-    private int numOfHits;
+    public int numOfHits;
 
     public Image[] hearts;
     public Sprite emptyHeart;
@@ -20,7 +20,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         numOfHearts = playerSO.numOfHearts;
-        numOfHits = numOfHearts * 4;
+        numOfHits = playerSO.numOfHits;
     }
 
     void Update()

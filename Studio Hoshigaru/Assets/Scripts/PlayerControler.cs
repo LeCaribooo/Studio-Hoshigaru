@@ -25,16 +25,20 @@ public class PlayerControler : MonoBehaviour
  
     private int extraJumpsValue;
     private int extraJumps;
-    
+
+    private int attackStatus = 0;
+    private int time = 0;
+    public GameObject attackHitbox;
+    private CapsuleCollider2D attackHitboxCollider;
+
     private bool facingRight = true;
 
-    private Canvas UI;
+    public Canvas UI;
 
     private CameraPlayer cameraPlayer;
    
     void PlayerSO()
     {
-        UI = playerSO.UI;
         movementSpeed = playerSO.movementSpeed;
         jumpForce = playerSO.jumpForce;
         isGrounded = playerSO.isGrounded;
@@ -55,9 +59,9 @@ public class PlayerControler : MonoBehaviour
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
         hitbox = GetComponent<CapsuleCollider2D>();
+        attackHitboxCollider = attackHitbox.GetComponent<CapsuleCollider2D>();
+        attackHitboxCollider.enabled = false;
     }
-
-    
 
     void FixedUpdate()
     {
@@ -66,17 +70,18 @@ public class PlayerControler : MonoBehaviour
            Move();
         }
 
-        if (facingRight == false && movementInput > 0)
+        if (facingRight == true && movementInput > 0)
         {
             PV.RPC("Flip", RpcTarget.All);
         }
-        else if (facingRight == true && movementInput < 0)
+        else if (facingRight == false && movementInput < 0)
         {
             PV.RPC("Flip", RpcTarget.All);
         }
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
+        
     }
     
     private void Update()
@@ -84,9 +89,10 @@ public class PlayerControler : MonoBehaviour
         if (PV.IsMine)
         {
             Jump();
-        }
+            Attack();
+        }   
     }
-    
+
     void Jump()
     {
         if (isGrounded == true)
@@ -121,7 +127,48 @@ public class PlayerControler : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
+    public void Attack()
+    {
+        Debug.Log(time);
+        if (attackStatus != 0)
+        {
+            time += 1;
+        }
+        if (Input.GetMouseButtonDown(0) && attackStatus == 0)
+        {
+            attackStatus += 1;
+            animator.SetInteger("AttackStatus", attackStatus);
+            PV.RPC("AttackEnabled", RpcTarget.All, true);
+        }
+        else if (Input.GetMouseButtonDown(0) && attackStatus == 1 && time > 50)
+        {
+            time = 0;
+            attackStatus += 1;
+            animator.SetInteger("AttackStatus", attackStatus);
+            PV.RPC("AttackEnabled", RpcTarget.All, true);
+        }
+        else if (Input.GetMouseButtonDown(0) && attackStatus == 2 && time > 50)
+        {
+            time = 0;
+            attackStatus -= 1;
+            animator.SetInteger("AttackStatus", attackStatus);
+            PV.RPC("AttackEnabled", RpcTarget.All, true);
 
+        }
+        else if (time > 100)
+        {
+            time = 0;
+            attackStatus = 0;
+            animator.SetInteger("AttackStatus", attackStatus);
+            PV.RPC("AttackEnabled", RpcTarget.All, false);
+        }
+    }
+
+    [PunRPC]
+    void AttackEnabled(bool isEnable)
+    {
+        attackHitboxCollider.enabled = isEnable;
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
