@@ -129,7 +129,6 @@ public class PlayerControler : MonoBehaviour
     }
     public void Attack()
     {
-        Debug.Log(time);
         if (attackStatus != 0)
         {
             time += 1;
@@ -169,6 +168,9 @@ public class PlayerControler : MonoBehaviour
     {
         attackHitboxCollider.enabled = isEnable;
     }
+
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))

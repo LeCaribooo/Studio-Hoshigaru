@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class GameSetup : MonoBehaviour
@@ -14,6 +15,6 @@ public class GameSetup : MonoBehaviour
       if (GameSetup.GS == null)
       {
          GameSetup.GS = this;
-      }
+      } 
    }
 }
