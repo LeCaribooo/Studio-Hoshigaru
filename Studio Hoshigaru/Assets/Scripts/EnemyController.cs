@@ -6,6 +6,7 @@ using Photon.Pun;
 
 public class EnemyController : MonoBehaviour
 {
+    public HealthBar healthbar;
     public EnemySO enemySO;
     private PhotonView PV;
 
@@ -15,11 +16,13 @@ public class EnemyController : MonoBehaviour
     {
         PV = GetComponent<PhotonView>();
         health = enemySO.health;
+        healthbar.SetMaxHealth(health);
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthbar.SetHealth(health);
         Death();
     }
 
