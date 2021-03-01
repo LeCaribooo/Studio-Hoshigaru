@@ -22,5 +22,4 @@ public class PhotonPlayer : MonoBehaviour
                 GameSetup.GS.spawnPoints[spawnPicker].position, GameSetup.GS.spawnPoints[spawnPicker].rotation, 0);
         }
     }
-     
 }

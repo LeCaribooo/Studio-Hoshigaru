@@ -2,6 +2,8 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraPlayer
+    - EnemyController
+    - EnemySO
     - GameSetup
     - Health
     - PhotonLobby
@@ -135,37 +137,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12716}
     - Class: 114
-      Script: {instanceID: 13022}
+      Script: {instanceID: 12932}
     - Class: 114
-      Script: {instanceID: 13132}
+      Script: {instanceID: 13002}
     - Class: 114
-      Script: {instanceID: 13434}
+      Script: {instanceID: 13026}
     - Class: 114
-      Script: {instanceID: 13524}
+      Script: {instanceID: 13136}
     - Class: 114
-      Script: {instanceID: 13544}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 13662}
+      Script: {instanceID: 13528}
     - Class: 114
-      Script: {instanceID: 13682}
+      Script: {instanceID: 13548}
     - Class: 114
-      Script: {instanceID: 14034}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 14070}
+      Script: {instanceID: 13686}
     - Class: 114
-      Script: {instanceID: 14078}
+      Script: {instanceID: 14038}
     - Class: 114
-      Script: {instanceID: 14084}
+      Script: {instanceID: 14074}
     - Class: 114
-      Script: {instanceID: 14304}
+      Script: {instanceID: 14082}
     - Class: 114
-      Script: {instanceID: 14862}
+      Script: {instanceID: 14088}
     - Class: 114
-      Script: {instanceID: 14916}
+      Script: {instanceID: 14308}
     - Class: 114
-      Script: {instanceID: 15056}
+      Script: {instanceID: 14866}
     - Class: 114
-      Script: {instanceID: 15094}
+      Script: {instanceID: 14920}
+    - Class: 114
+      Script: {instanceID: 15060}
+    - Class: 114
+      Script: {instanceID: 15098}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -258,27 +264,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12798}
     - Class: 114
-      Script: {instanceID: 12954}
+      Script: {instanceID: 12932}
     - Class: 114
-      Script: {instanceID: 13132}
+      Script: {instanceID: 12956}
     - Class: 114
-      Script: {instanceID: 13288}
+      Script: {instanceID: 13002}
     - Class: 114
-      Script: {instanceID: 13524}
+      Script: {instanceID: 13136}
     - Class: 114
-      Script: {instanceID: 13672}
+      Script: {instanceID: 13292}
     - Class: 114
-      Script: {instanceID: 14078}
+      Script: {instanceID: 13528}
     - Class: 114
-      Script: {instanceID: 14178}
+      Script: {instanceID: 13676}
     - Class: 114
-      Script: {instanceID: 14304}
+      Script: {instanceID: 14082}
     - Class: 114
-      Script: {instanceID: 14862}
+      Script: {instanceID: 14182}
     - Class: 114
-      Script: {instanceID: 14916}
+      Script: {instanceID: 14308}
     - Class: 114
-      Script: {instanceID: 15056}
+      Script: {instanceID: 14866}
+    - Class: 114
+      Script: {instanceID: 14920}
+    - Class: 114
+      Script: {instanceID: 15060}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -972,6 +982,12 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: e3f5dc76b0bd17c1849822e9479723e5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyController
+  - hash:
+      serializedVersion: 2
       Hash: ec9cfd716e8b048ce509c8dd26bd2705
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1000,6 +1016,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChannelSelector
+  - hash:
+      serializedVersion: 2
+      Hash: d90c965b749919362630ee78f5b1873a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemySO
   - hash:
       serializedVersion: 2
       Hash: 14f6e7d5314d3aff9265172f9d1e95a9
@@ -1916,4 +1938,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Resources/Sprites/TilesMap/Scenes/PhotonLobby.unity
   - Assets/TEST KERIAN/Scenes/TestCharacter.unity
-  playerPath: C:/Users/paval/Documents/Build Unity Studio/Studio Hoshigaru.exe
+  playerPath: D:/Code/Build Studio Hoshigaru/Studio Hoshigaru.exe

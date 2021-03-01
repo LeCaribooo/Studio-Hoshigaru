@@ -95,10 +95,4 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         PhotonNetwork.Instantiate(Path.Combine("Prefab","Photon","PhotonNetworkPlayer"), transform.position,
             Quaternion.identity, 0);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

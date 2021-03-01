@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
 public class Health : MonoBehaviour
 {
@@ -17,17 +18,21 @@ public class Health : MonoBehaviour
     public Sprite hquarterHeart;
     public Sprite fullHeart;
 
+    private PhotonView PV;
+
     void Start()
     {
+        PV = GetComponent<PhotonView>();
         numOfHearts = playerSO.numOfHearts;
         numOfHits = playerSO.numOfHits;
     }
 
+    [PunRPC]
     public void Death()
     {
         if (numOfHits <= 0)
         {
-            Destroy(this.gameObject);
+           Destroy(this.gameObject);
         }
     }
 

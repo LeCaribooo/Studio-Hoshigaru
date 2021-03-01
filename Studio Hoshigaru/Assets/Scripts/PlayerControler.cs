@@ -135,12 +135,14 @@ public class PlayerControler : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && attackStatus == 0)
         {
+            PV.RPC("AttackEnabled", RpcTarget.All, false);
             attackStatus += 1;
             animator.SetInteger("AttackStatus", attackStatus);
             PV.RPC("AttackEnabled", RpcTarget.All, true);
         }
         else if (Input.GetMouseButtonDown(0) && attackStatus == 1 && time > 50)
         {
+            PV.RPC("AttackEnabled", RpcTarget.All, false);
             time = 0;
             attackStatus += 1;
             animator.SetInteger("AttackStatus", attackStatus);
@@ -148,6 +150,7 @@ public class PlayerControler : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(0) && attackStatus == 2 && time > 50)
         {
+            PV.RPC("AttackEnabled", RpcTarget.All, false);
             time = 0;
             attackStatus -= 1;
             animator.SetInteger("AttackStatus", attackStatus);
