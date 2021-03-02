@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using Pathfinding;
 
 
 public class EnemyController : MonoBehaviour
 {
-    public AIPath aIPath;
     public HealthBar healthbar;
     public EnemySO enemySO;
     private PhotonView PV;
-    private Animator animator;
 
     public int health;
     // Start is called before the first frame update
@@ -20,13 +17,8 @@ public class EnemyController : MonoBehaviour
         PV = GetComponent<PhotonView>();
         health = enemySO.health;
         healthbar.SetMaxHealth(health);
-        animator = GetComponent<Animator>();
     }
-    private void FixedUpdate()
-    {
-        float enemyvelocity = Mathf.Abs(aIPath.velocity.x);
-        animator.SetFloat("speed", enemyvelocity);
-    }
+
     // Update is called once per frame
     void Update()
     {
