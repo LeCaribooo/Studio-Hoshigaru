@@ -27,18 +27,10 @@ public class Health : MonoBehaviour
         numOfHits = playerSO.numOfHits;
     }
 
-    [PunRPC]
-    public void Death()
-    {
-        if (numOfHits <= 0)
-        {
-           Destroy(this.gameObject);
-        }
-    }
+   
 
     void Update()
     {
-        Death();
         if(numOfHits > numOfHearts * 4)
         {
             numOfHits = numOfHearts * 4;

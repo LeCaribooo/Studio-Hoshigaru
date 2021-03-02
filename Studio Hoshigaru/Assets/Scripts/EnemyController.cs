@@ -31,7 +31,7 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         healthbar.SetHealth(health);
-        Death();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -40,14 +40,8 @@ public class EnemyController : MonoBehaviour
     }
     
 
-    [PunRPC]
-    public void Death()
-    {
-        if (health <= 0)
-        {
-            Destroy(this.gameObject);
-        }
-    }
+    
+    
 
     public void Attack(Collider2D other)
     {
