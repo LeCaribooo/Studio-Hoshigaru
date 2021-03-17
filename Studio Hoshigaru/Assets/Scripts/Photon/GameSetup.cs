@@ -3,18 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using Photon.Pun;
+
 
 public class GameSetup : MonoBehaviour
 {
-   public static GameSetup GS;
-   
-   public Transform[] spawnPoints;
+    public static GameSetup GS;
 
-   private void OnEnable()
-   {
-      if (GameSetup.GS == null)
-      {
-         GameSetup.GS = this;
-      } 
-   }
+    public Transform[] spawnPoints;
+
+    private void OnEnable()
+    {
+        if (GameSetup.GS == null)
+        {
+            GameSetup.GS = this;
+        }
+    }
 }

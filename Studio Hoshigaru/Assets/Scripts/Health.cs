@@ -18,27 +18,14 @@ public class Health : MonoBehaviour
     public Sprite hquarterHeart;
     public Sprite fullHeart;
 
-    private PhotonView PV;
-
     void Start()
     {
-        PV = GetComponent<PhotonView>();
         numOfHearts = playerSO.numOfHearts;
         numOfHits = playerSO.numOfHits;
-    }
-
-    [PunRPC]
-    public void Death()
-    {
-        if (numOfHits <= 0)
-        {
-           Destroy(this.gameObject);
-        }
-    }
+    } 
 
     void Update()
     {
-        Death();
         if(numOfHits > numOfHearts * 4)
         {
             numOfHits = numOfHearts * 4;

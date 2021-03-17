@@ -7,8 +7,9 @@ using Photon.Pun;
 public class PlayerControler : MonoBehaviour
 {
     public PlayerSO playerSO;
+    public Health health;
 
-    private PhotonView PV;
+    public PhotonView PV;
 
     private float movementSpeed;       //Speed du joueur
     private float jumpForce;           //Puissance de saut
@@ -33,10 +34,15 @@ public class PlayerControler : MonoBehaviour
 
     private bool facingRight = true;
 
+    private SpriteRenderer spriteRenderer;
+
     public Canvas UI;
 
-    private CameraPlayer cameraPlayer;
-   
+    public Camera camera;
+
+    public bool isDead = false;
+
+
     void PlayerSO()
     {
         movementSpeed = playerSO.movementSpeed;
@@ -56,11 +62,13 @@ public class PlayerControler : MonoBehaviour
         {
             UI.enabled = false;
         }
+        health = GetComponent<Health>();
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
         hitbox = GetComponent<CapsuleCollider2D>();
         attackHitboxCollider = attackHitbox.GetComponent<CapsuleCollider2D>();
         attackHitboxCollider.enabled = false;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -78,14 +86,16 @@ public class PlayerControler : MonoBehaviour
         {
             PV.RPC("Flip", RpcTarget.All);
         }
-
-        float characterVelocity = Mathf.Abs(rb.velocity.x);
-        animator.SetFloat("Speed", characterVelocity);
-        
     }
     
     private void Update()
     {
+        Death();
+        if (isDead)
+        {
+            DisableEverythingWhenDead();
+            DisplayCameraWhenDead();
+        }
         if (PV.IsMine)
         {
             Jump();
@@ -98,11 +108,17 @@ public class PlayerControler : MonoBehaviour
         if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;
+            animator.SetBool("isJumping", false);
+        }
+        else
+        {
+            animator.SetBool("isJumping", true);
         }
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
-            rb.velocity = Vector2.up * jumpForce ;
+            rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
+            animator.SetTrigger("takeOf");
         }
         else if (Input.GetButtonDown("Jump")&& extraJumps == 0 && isGrounded == true)
         {
@@ -114,11 +130,18 @@ public class PlayerControler : MonoBehaviour
     void Move()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        
         movementInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(movementInput * movementSpeed, rb.velocity.y); //Déplace le rigibody 
+        if(movementInput == 0)
+        {
+            animator.SetBool("isRunning", false);
+        }
+        else
+        {
+            animator.SetBool("isRunning", true);
+        }
+        rb.velocity = new Vector2(movementInput * movementSpeed, rb.velocity.y); //Déplace le rigibody
     }
-    
+
     [PunRPC]
     void Flip()
     {
@@ -127,6 +150,7 @@ public class PlayerControler : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
+
     public void Attack()
     {
         if (attackStatus != 0)
@@ -172,6 +196,49 @@ public class PlayerControler : MonoBehaviour
         attackHitboxCollider.enabled = isEnable;
     }
 
+    public void Death()
+    {
+        if (health.numOfHits <= 0)
+        {
+            isDead = true;
+        }
+    }
+
+    public void DisableEverythingWhenDead()
+    {
+        hitbox.enabled = false;
+        animator.enabled = false;
+        attackHitbox.SetActive(false);
+        UI.enabled = false;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        spriteRenderer.enabled = false;
+        groundCheck.gameObject.SetActive(false);
+        this.tag = "Untagged";
+        camera.gameObject.SetActive(false);
+    }
+
+
+    public Transform DisplayCameraWhenDead()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        Debug.Log("ON lance les caméras" + players.Length);
+        int actualDisplay = 0;
+        if (Input.GetMouseButtonDown(0))
+        {
+            players[actualDisplay].GetComponent<PlayerControler>().camera.gameObject.SetActive(false);
+            actualDisplay++;
+            actualDisplay = actualDisplay % players.Length;
+            
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            players[actualDisplay].GetComponent<PlayerControler>().camera.gameObject.SetActive(false);
+            actualDisplay--;
+            actualDisplay = actualDisplay % players.Length;
+        }
+        players[actualDisplay].GetComponent<PlayerControler>().camera.gameObject.SetActive(true);
+        return players[actualDisplay].GetComponent<PlayerControler>().camera.transform;
+    }
 
 
     private void OnTriggerEnter2D(Collider2D other)

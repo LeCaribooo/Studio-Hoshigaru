@@ -3,15 +3,19 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraPlayer
     - EnemyController
+    - EnemyGFX
     - EnemySO
     - GameSetup
     - Health
+    - HealthBar
+    - Parallaxing
     - PhotonLobby
     - PhotonPlayer
     - PhotonRoom
     - PlayerAttack
     - PlayerControler
     - PlayerSO
+    - SpawnEnemy
     AstarPathfindingProject.dll:
     - AstarPath
     - Pathfinding.AIDestinationSetter
@@ -28,6 +32,10 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
     PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PhotonAnimatorViewEditor
+    - Photon.Pun.PhotonRigidbody2DViewEditor
+    - Photon.Pun.PhotonTransformViewEditor
+    - Photon.Pun.PhotonViewInspector
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
@@ -44,8 +52,16 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    Unity.2D.Tilemap.Extras.dll:
+    - UnityEngine.Tilemaps.AnimatedTile
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -105,9 +121,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: -584}
     - Class: 114
-      Script: {instanceID: 612}
-    - Class: 114
-      Script: {instanceID: 11264}
+      Script: {instanceID: 614}
     - Class: 114
       Script: {instanceID: 11266}
     - Class: 114
@@ -117,61 +131,71 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11272}
     - Class: 114
-      Script: {instanceID: 11458}
+      Script: {instanceID: 11274}
     - Class: 114
-      Script: {instanceID: 11556}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11572}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 11600}
+      Script: {instanceID: 11578}
     - Class: 114
-      Script: {instanceID: 11710}
+      Script: {instanceID: 11606}
     - Class: 114
-      Script: {instanceID: 12220}
+      Script: {instanceID: 11722}
     - Class: 114
-      Script: {instanceID: 12310}
+      Script: {instanceID: 11806}
     - Class: 114
-      Script: {instanceID: 12496}
+      Script: {instanceID: 12248}
     - Class: 114
-      Script: {instanceID: 12622}
+      Script: {instanceID: 12342}
     - Class: 114
-      Script: {instanceID: 12716}
+      Script: {instanceID: 12528}
     - Class: 114
-      Script: {instanceID: 12932}
+      Script: {instanceID: 12658}
     - Class: 114
-      Script: {instanceID: 13002}
+      Script: {instanceID: 12714}
     - Class: 114
-      Script: {instanceID: 13026}
+      Script: {instanceID: 12754}
     - Class: 114
-      Script: {instanceID: 13136}
+      Script: {instanceID: 12972}
     - Class: 114
-      Script: {instanceID: 13438}
+      Script: {instanceID: 13042}
     - Class: 114
-      Script: {instanceID: 13528}
+      Script: {instanceID: 13066}
     - Class: 114
-      Script: {instanceID: 13548}
+      Script: {instanceID: 13182}
     - Class: 114
-      Script: {instanceID: 13666}
+      Script: {instanceID: 13492}
     - Class: 114
-      Script: {instanceID: 13686}
+      Script: {instanceID: 13582}
     - Class: 114
-      Script: {instanceID: 14038}
+      Script: {instanceID: 13602}
     - Class: 114
-      Script: {instanceID: 14074}
+      Script: {instanceID: 13722}
     - Class: 114
-      Script: {instanceID: 14082}
+      Script: {instanceID: 13732}
     - Class: 114
-      Script: {instanceID: 14088}
+      Script: {instanceID: 13742}
     - Class: 114
-      Script: {instanceID: 14308}
+      Script: {instanceID: 14100}
     - Class: 114
-      Script: {instanceID: 14866}
+      Script: {instanceID: 14138}
     - Class: 114
-      Script: {instanceID: 14920}
+      Script: {instanceID: 14148}
     - Class: 114
-      Script: {instanceID: 15060}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 15098}
+      Script: {instanceID: 14378}
+    - Class: 114
+      Script: {instanceID: 14946}
+    - Class: 114
+      Script: {instanceID: 15000}
+    - Class: 114
+      Script: {instanceID: 15038}
+    - Class: 114
+      Script: {instanceID: 15144}
+    - Class: 114
+      Script: {instanceID: 15182}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,7 +234,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 1839735485
       Script: {instanceID: 0}
-    Assets/TEST KERIAN/Scenes/TestCharacter.unity:
+    Assets/Scenes/TestCharacter.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -225,9 +249,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
-    - Class: 60
-      Script: {instanceID: 0}
-    - Class: 61
+    - Class: 58
       Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
@@ -246,49 +268,51 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 612}
+      Script: {instanceID: 614}
     - Class: 114
-      Script: {instanceID: 11272}
+      Script: {instanceID: 11274}
     - Class: 114
-      Script: {instanceID: 11600}
+      Script: {instanceID: 11606}
     - Class: 114
-      Script: {instanceID: 11710}
+      Script: {instanceID: 11704}
     - Class: 114
-      Script: {instanceID: 11752}
+      Script: {instanceID: 11722}
     - Class: 114
-      Script: {instanceID: 12310}
+      Script: {instanceID: 11764}
     - Class: 114
-      Script: {instanceID: 12496}
+      Script: {instanceID: 12342}
     - Class: 114
-      Script: {instanceID: 12716}
+      Script: {instanceID: 12528}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12714}
     - Class: 114
-      Script: {instanceID: 12932}
+      Script: {instanceID: 12754}
     - Class: 114
-      Script: {instanceID: 12956}
+      Script: {instanceID: 12836}
     - Class: 114
-      Script: {instanceID: 13002}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 13136}
+      Script: {instanceID: 13182}
     - Class: 114
-      Script: {instanceID: 13292}
+      Script: {instanceID: 13342}
     - Class: 114
-      Script: {instanceID: 13528}
+      Script: {instanceID: 13412}
     - Class: 114
-      Script: {instanceID: 13676}
+      Script: {instanceID: 13582}
     - Class: 114
-      Script: {instanceID: 14082}
+      Script: {instanceID: 13732}
     - Class: 114
-      Script: {instanceID: 14182}
+      Script: {instanceID: 14148}
     - Class: 114
-      Script: {instanceID: 14308}
+      Script: {instanceID: 14252}
     - Class: 114
-      Script: {instanceID: 14866}
+      Script: {instanceID: 14378}
     - Class: 114
-      Script: {instanceID: 14920}
+      Script: {instanceID: 14946}
     - Class: 114
-      Script: {instanceID: 15060}
+      Script: {instanceID: 15000}
+    - Class: 114
+      Script: {instanceID: 15144}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -544,6 +568,12 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: 167239bfaf11b5bd4ffcc47482f00df6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Parallaxing
+  - hash:
+      serializedVersion: 2
       Hash: 60fb902c3bfc0533f4e7b79e5d161e78
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Hub
@@ -580,6 +610,12 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyGFX
+  - hash:
+      serializedVersion: 2
       Hash: b1f26da3046d8b188758169a9d6b1078
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.SlotRacer.Utils
@@ -596,6 +632,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 92583f5c853ea78ec8d05eed0dcbb497
+    assemblyName: Unity.2D.Tilemap.Extras.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: RandomTile
   - hash:
       serializedVersion: 2
       Hash: 267e1e00a8f1d106bd614339db235595
@@ -682,10 +724,22 @@ ScriptsOnlyBuild:
     className: FunnelModifier
   - hash:
       serializedVersion: 2
+      Hash: cd1c93a552a813159175d818a844dc09
+    assemblyName: Unity.2D.Tilemap.Extras.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: AdvancedRuleOverrideTile
+  - hash:
+      serializedVersion: 2
       Hash: 11df54cb47bd74c537f3c732a94ea97d
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
     className: PhotonHandler
+  - hash:
+      serializedVersion: 2
+      Hash: fc29f975ab35a5033d05bcfda3c82435
+    assemblyName: Unity.2D.Tilemap.Extras.dll
+    namespaceName: UnityEngine
+    className: RuleTile
   - hash:
       serializedVersion: 2
       Hash: af25e393e025ec6fe0c14a739368cb46
@@ -934,7 +988,13 @@ ScriptsOnlyBuild:
     className: CurrentRoomPlayerTtlProperty
   - hash:
       serializedVersion: 2
-      Hash: 3d0d2f4afaaa66b5977c7027f2bf26de
+      Hash: ab6a2fed0a3d86e42cbaa680bbf9bfac
+    assemblyName: Unity.2D.Tilemap.Extras.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: AnimatedTile
+  - hash:
+      serializedVersion: 2
+      Hash: 937058ffcf2b318db4c55d51b589fedd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerControler
@@ -982,7 +1042,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: e3f5dc76b0bd17c1849822e9479723e5
+      Hash: ab420c1c1a497f2a660306dd944434df
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyController
@@ -1144,6 +1204,18 @@ ScriptsOnlyBuild:
     className: OnClickDestroy
   - hash:
       serializedVersion: 2
+      Hash: 7ba35897a6eb27627ed456c682c34253
+    assemblyName: Unity.2D.Tilemap.Extras.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: PipelineTile
+  - hash:
+      serializedVersion: 2
+      Hash: ba62abe34655d7e7cd27c0bf1fa1b39d
+    assemblyName: Unity.2D.Tilemap.Extras.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: RuleOverrideTile
+  - hash:
+      serializedVersion: 2
       Hash: 43acdecfcc62de1110964c47067c846f
     assemblyName: AstarPathfindingProject.dll
     namespaceName: Pathfinding
@@ -1174,6 +1246,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: b6de0b066fb3d01a8210c9dd741dddc3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnEnemy
+  - hash:
+      serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1190,6 +1268,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: IsConnectedProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 8cb9c869ab50566c3424fcaae4d4269b
+    assemblyName: Unity.2D.Tilemap.Extras.dll
+    namespaceName: UnityEngine
+    className: HexagonalRuleTile
   - hash:
       serializedVersion: 2
       Hash: 23d98efc145b1081fdecd8f309db521f
@@ -1282,7 +1366,7 @@ ScriptsOnlyBuild:
     className: PointedAtGameObjectInfo
   - hash:
       serializedVersion: 2
-      Hash: 902b8cbfe67e173ddf863dce9b8d94a1
+      Hash: 7c4d61ba679beaa5d71821c8c9d31078
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraPlayer
@@ -1390,6 +1474,12 @@ ScriptsOnlyBuild:
     className: FriendItem
   - hash:
       serializedVersion: 2
+      Hash: cdf089f6cdbdaf804990606672273b73
+    assemblyName: Unity.2D.Tilemap.Extras.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: WeightedRandomTile
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1450,6 +1540,12 @@ ScriptsOnlyBuild:
     className: CameraWork
   - hash:
       serializedVersion: 2
+      Hash: 47d188b45c9fbdad0d49488da2d43d78
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: shadowtest
+  - hash:
+      serializedVersion: 2
       Hash: e10400e84c8c573b2b5e4088aca77453
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
@@ -1468,10 +1564,22 @@ ScriptsOnlyBuild:
     className: Asteroid
   - hash:
       serializedVersion: 2
+      Hash: fc29f975ab35a5033d05bcfda3c82435
+    assemblyName: Unity.2D.Tilemap.Extras.dll
+    namespaceName: UnityEngine
+    className: IsometricRuleTile
+  - hash:
+      serializedVersion: 2
       Hash: 8abe5c5970b933d28c84fe29c2232578
     assemblyName: AstarPathfindingProject.dll
     namespaceName: Pathfinding
     className: RelevantGraphSurface
+  - hash:
+      serializedVersion: 2
+      Hash: 3b3bf14021899a113dbb5c9e4f0d86ad
+    assemblyName: Unity.2D.Tilemap.Extras.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: GridInformation
   - hash:
       serializedVersion: 2
       Hash: 7829e932aec962afd9bcfad28ffff27d
@@ -1594,10 +1702,22 @@ ScriptsOnlyBuild:
     className: ProceduralController
   - hash:
       serializedVersion: 2
+      Hash: 490a4632ae50fb0b65bba5aaaf7edebd
+    assemblyName: Unity.2D.Tilemap.Extras.dll
+    namespaceName: 
+    className: TintTextureGenerator
+  - hash:
+      serializedVersion: 2
       Hash: 427e4ae6223362877cde7ac01baa97c3
     assemblyName: AstarPathfindingProject.dll
     namespaceName: Pathfinding
     className: NodeLink3
+  - hash:
+      serializedVersion: 2
+      Hash: 7ba35897a6eb27627ed456c682c34253
+    assemblyName: Unity.2D.Tilemap.Extras.dll
+    namespaceName: UnityEngine.Tilemaps
+    className: TerrainTile
   - hash:
       serializedVersion: 2
       Hash: c5fd97cc10b89deaf7c60af66a6b0d5a
@@ -1804,6 +1924,12 @@ ScriptsOnlyBuild:
     className: OfflineModeProperty
   - hash:
       serializedVersion: 2
+      Hash: 1028c39545bcfa841aaab54121e69a47
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthBar
+  - hash:
+      serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1937,5 +2063,5 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Resources/Sprites/TilesMap/Scenes/PhotonLobby.unity
-  - Assets/TEST KERIAN/Scenes/TestCharacter.unity
+  - Assets/Scenes/TestCharacter.unity
   playerPath: D:/Code/Build Studio Hoshigaru/Studio Hoshigaru.exe
