@@ -22,7 +22,9 @@ namespace Pathfinding {
 
 		public Transform whichTarget()
         {
-		players = GameObject.FindGameObjectsWithTag("Player");
+			players = GameObject.FindGameObjectsWithTag("Player");
+			if (players.Length == 0)
+				return null;
 			float minDist = Mathf.Infinity;
 			GameObject currCloser = players[0];
 			foreach (GameObject player in players)

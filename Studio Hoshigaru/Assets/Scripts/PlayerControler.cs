@@ -13,7 +13,9 @@ public class PlayerControler : MonoBehaviour
 
     private float movementSpeed;       //Speed du joueur
     private float jumpForce;           //Puissance de saut
-    private float movementInput;      //(-1 ou 1/ Gauche Droite)
+    private float movementInput;       //(-1 ou 1 Gauche Droite)
+    private float jumpTimeCounter;
+    private float jumpTime;
    
     private Rigidbody2D rb;
     public Animator animator;
@@ -39,6 +41,7 @@ public class PlayerControler : MonoBehaviour
     public Canvas UI;
 
     public Camera camera;
+    int actualDisplay = 0;
 
     public bool isDead = false;
 
@@ -51,6 +54,7 @@ public class PlayerControler : MonoBehaviour
         checkRadius = playerSO.checkRadius;
         whatIsGround = playerSO.whatIsGround;
         extraJumpsValue = playerSO.extraJumpsValue;
+        jumpTime = playerSO.jumpTime;
     }
 
 
@@ -91,11 +95,6 @@ public class PlayerControler : MonoBehaviour
     private void Update()
     {
         Death();
-        if (isDead)
-        {
-            DisableEverythingWhenDead();
-            DisplayCameraWhenDead();
-        }
         if (PV.IsMine)
         {
             Jump();
@@ -105,25 +104,34 @@ public class PlayerControler : MonoBehaviour
 
     void Jump()
     {
-        if (isGrounded == true)
+        if (isGrounded)
         {
+            movementSpeed = playerSO.movementSpeed;
             extraJumps = extraJumpsValue;
+            jumpTimeCounter = jumpTime;
             animator.SetBool("isJumping", false);
         }
         else
         {
             animator.SetBool("isJumping", true);
         }
-        if (Input.GetButtonDown("Jump") && extraJumps > 0)
+
+        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
             animator.SetTrigger("takeOf");
         }
-        else if (Input.GetButtonDown("Jump")&& extraJumps == 0 && isGrounded == true)
+
+        if (Input.GetKey(KeyCode.Space) && !isGrounded && extraJumps == extraJumpsValue)
         {
-            rb.velocity = Vector2.up * jumpForce;
-        }
+            if(jumpTimeCounter > 0)
+            {
+                movementSpeed = 3;
+                rb.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+            }
+        }           
     }
 
     
@@ -202,6 +210,15 @@ public class PlayerControler : MonoBehaviour
         {
             isDead = true;
         }
+        if (isDead)
+        {
+            DisableEverythingWhenDead();
+            if (PV.IsMine)
+            {
+                DisplayCameraWhenDead();
+            }   
+        }
+        
     }
 
     public void DisableEverythingWhenDead()
@@ -222,18 +239,10 @@ public class PlayerControler : MonoBehaviour
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         Debug.Log("ON lance les caméras" + players.Length);
-        int actualDisplay = 0;
         if (Input.GetMouseButtonDown(0))
         {
             players[actualDisplay].GetComponent<PlayerControler>().camera.gameObject.SetActive(false);
             actualDisplay++;
-            actualDisplay = actualDisplay % players.Length;
-            
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            players[actualDisplay].GetComponent<PlayerControler>().camera.gameObject.SetActive(false);
-            actualDisplay--;
             actualDisplay = actualDisplay % players.Length;
         }
         players[actualDisplay].GetComponent<PlayerControler>().camera.gameObject.SetActive(true);
