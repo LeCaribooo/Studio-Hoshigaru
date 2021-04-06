@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Resources/Sprites/TilesMap/Scenes/PhotonLobby.unity
     guid: 5dbe157d6f7ad314e859039d600f9869
   - enabled: 1
-    path: Assets/Scenes/TestCharacter.unity
+    path: Assets/Scenes/Phase 1/TestCharacter.unity
     guid: b0e8549f9a488714ca49b773bbc45234
+  - enabled: 1
+    path: Assets/Scenes/D&R/Level 1-1.unity
+    guid: 596f4fc2459fec54086faccb4a9346d2
   m_configObjects: {}
