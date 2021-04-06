@@ -16,10 +16,10 @@ MonoBehaviour:
   jumpForce: 6
   numOfHearts: 3
   numOfHits: 12
-  UI: {fileID: 409648138822584120, guid: 893ec17962ccea849889e20887d50aab, type: 3}
   extraJumpsValue: 1
   isGrounded: 0
   checkRadius: 0.1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  jumpTime: 0.2

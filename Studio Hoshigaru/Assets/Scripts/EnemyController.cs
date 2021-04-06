@@ -2,23 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Pathfinding;
 
 
 public class EnemyController : MonoBehaviour
 {
+    private AIPath aIPath;
     public HealthBar healthbar;
     public EnemySO enemySO;
     private PhotonView PV;
+    private Animator animator;
 
     public int health;
     // Start is called before the first frame update
     void Start()
     {
+        SetAsChild();
+        aIPath = GetComponentInParent<AIPath>();
         PV = GetComponent<PhotonView>();
         health = enemySO.health;
         healthbar.SetMaxHealth(health);
+        animator = GetComponent<Animator>();
     }
-
+    private void FixedUpdate()
+    {
+        float enemyvelocity = Mathf.Abs(aIPath.velocity.x);
+        animator.SetFloat("speed", enemyvelocity);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -38,6 +48,8 @@ public class EnemyController : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
+            GameObject.Find("DarkAngel").SetActive(false);
+            
         }
     }
 
@@ -48,6 +60,12 @@ public class EnemyController : MonoBehaviour
             GameObject player = other.gameObject;
             Health health = player.GetComponent<Health>();
             health.numOfHits -= enemySO.damage;
-        }
+        }  
+    }
+
+    
+    private void SetAsChild()
+    {
+        this.gameObject.transform.parent = GameObject.Find("DarkAngel").transform;
     }
 }

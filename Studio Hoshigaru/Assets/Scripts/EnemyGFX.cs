@@ -6,7 +6,12 @@ using Pathfinding;
 public class EnemyGFX : MonoBehaviour
 {
     // Start is called before the first frame update
-    public AIPath aIPath;
+    private AIPath aIPath;
+
+    private void Start()
+    {
+        aIPath = GetComponentInParent<AIPath>();
+    }
 
     // Update is called once per frame
     void Update()

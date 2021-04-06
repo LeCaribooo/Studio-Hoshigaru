@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":false,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":2.2679615020751955,"y":2.2664425373077394,"z":-36.701107025146487},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":3.8949217796325685,"orthographic":true}
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":false,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-2.341831684112549,"y":-1.1186209917068482,"z":-399.735107421875},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":5.42497444152832,"orthographic":true}
 >>>>>>> D&R
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":false,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-1.7526979446411133,"y":-0.5195073485374451,"z":-39.57199478149414},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":5.019369125366211,"orthographic":true}
+>>>>>>> Caméra--Jump--JumpAnimation

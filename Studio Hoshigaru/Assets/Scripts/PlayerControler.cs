@@ -3,16 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using System.IO;
 
 public class PlayerControler : MonoBehaviour
 {
     public PlayerSO playerSO;
 
-    private PhotonView PV;
+    public PhotonView PV;
 
     private float movementSpeed;       //Speed du joueur
     private float jumpForce;           //Puissance de saut
-    private float movementInput;      //(-1 ou 1/ Gauche Droite)
+    private float movementInput;       //(-1 ou 1 Gauche Droite)
+    private float jumpTimeCounter;
+    private float jumpTime;
    
     private Rigidbody2D rb;
     public Animator animator;
@@ -33,10 +36,17 @@ public class PlayerControler : MonoBehaviour
 
     private bool facingRight = true;
 
+    private SpriteRenderer spriteRenderer;
+
+    private PlayerDeath playerDeath;
+
     public Canvas UI;
 
-    private CameraPlayer cameraPlayer;
-   
+    public Camera camera;
+
+    public bool isDead = false;
+
+
     void PlayerSO()
     {
         movementSpeed = playerSO.movementSpeed;
@@ -45,6 +55,7 @@ public class PlayerControler : MonoBehaviour
         checkRadius = playerSO.checkRadius;
         whatIsGround = playerSO.whatIsGround;
         extraJumpsValue = playerSO.extraJumpsValue;
+        jumpTime = playerSO.jumpTime;
     }
 
 
@@ -52,35 +63,36 @@ public class PlayerControler : MonoBehaviour
     {
         PlayerSO();
         PV = GetComponent<PhotonView>();
+        playerDeath = GetComponent<PlayerDeath>();
+        playerDeath.enabled = true;
         if (!PV.IsMine)
         {
             UI.enabled = false;
         }
+        
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
         hitbox = GetComponent<CapsuleCollider2D>();
         attackHitboxCollider = attackHitbox.GetComponent<CapsuleCollider2D>();
         attackHitboxCollider.enabled = false;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
     {
         if (PV.IsMine)
         {
-           Move();
+             Move();
+            if (facingRight && movementInput > 0)
+            {
+                Flip();
+            }
+            else if (!facingRight && movementInput < 0)
+            {
+                Flip();
+            }
         }
 
-        if (facingRight == true && movementInput > 0)
-        {
-            PV.RPC("Flip", RpcTarget.All);
-        }
-        else if (facingRight == false && movementInput < 0)
-        {
-            PV.RPC("Flip", RpcTarget.All);
-        }
-
-        float characterVelocity = Mathf.Abs(rb.velocity.x);
-        animator.SetFloat("Speed", characterVelocity);
         
     }
     
@@ -95,30 +107,52 @@ public class PlayerControler : MonoBehaviour
 
     void Jump()
     {
-        if (isGrounded == true)
+        if (isGrounded)
         {
+            movementSpeed = playerSO.movementSpeed;
             extraJumps = extraJumpsValue;
+            jumpTimeCounter = jumpTime;
+            animator.SetBool("isJumping", false);
         }
-        if (Input.GetButtonDown("Jump") && extraJumps > 0)
+        else
         {
-            rb.velocity = Vector2.up * jumpForce ;
-            extraJumps--;
+            animator.SetBool("isJumping", true);
         }
-        else if (Input.GetButtonDown("Jump")&& extraJumps == 0 && isGrounded == true)
+
+        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
+            extraJumps--;
+            animator.SetTrigger("takeOf");
         }
+
+        if (Input.GetKey(KeyCode.Space) && !isGrounded && extraJumps == extraJumpsValue)
+        {
+            if(jumpTimeCounter > 0)
+            {
+                movementSpeed = 3;
+                rb.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+            }
+        }           
     }
 
     
     void Move()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        
         movementInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(movementInput * movementSpeed, rb.velocity.y); //Déplace le rigibody 
+        if(movementInput == 0)
+        {
+            animator.SetBool("isRunning", false);
+        }
+        else
+        {
+            animator.SetBool("isRunning", true);
+        }
+        rb.velocity = new Vector2(movementInput * movementSpeed, rb.velocity.y); //Déplace le rigibody
     }
-    
+
     [PunRPC]
     void Flip()
     {
@@ -127,11 +161,12 @@ public class PlayerControler : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
+
     public void Attack()
     {
         if (attackStatus != 0)
         {
-            time += 1;
+            time += 1 ;
         }
         if (Input.GetMouseButtonDown(0) && attackStatus == 0)
         {
@@ -172,7 +207,18 @@ public class PlayerControler : MonoBehaviour
         attackHitboxCollider.enabled = isEnable;
     }
 
-
+    /*public void DisableEverythingWhenDead()
+    {
+        hitbox.enabled = false;
+        animator.enabled = false;
+        attackHitbox.SetActive(false);
+        UI.enabled = false;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        spriteRenderer.enabled = false;
+        groundCheck.gameObject.SetActive(false);
+        this.tag = "Untagged";
+        camera.gameObject.SetActive(false);
+    }*/
 
     private void OnTriggerEnter2D(Collider2D other)
     {

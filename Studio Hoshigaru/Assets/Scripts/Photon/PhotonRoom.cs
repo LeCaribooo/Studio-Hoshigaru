@@ -85,14 +85,13 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         currentScene = scene.buildIndex;
         if (currentScene == multiplayScene)
         {
-            CreatePlayer(); 
+            CreatePlayer();
         }
     }
 
     private void CreatePlayer()
     {
         //creates player network controller but not player character
-        PhotonNetwork.Instantiate(Path.Combine("Prefab","Photon","PhotonNetworkPlayer"), transform.position,
-            Quaternion.identity, 0);
+        PhotonNetwork.Instantiate(Path.Combine("Prefab","Photon","PhotonNetworkPlayer"), transform.position,Quaternion.identity, 0);
     }
 }

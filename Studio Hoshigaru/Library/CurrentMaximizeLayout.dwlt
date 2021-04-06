@@ -19,10 +19,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1469
     height: 1298
   m_MinSize: {x: 781, y: 492}
   m_MaxSize: {x: 16006, y: 14042}
+=======
+    width: 1904
+    height: 931
+  m_MinSize: {x: 778, y: 321}
+  m_MaxSize: {x: 16003, y: 8021}
+>>>>>>> Caméra--Jump--JumpAnimation
   vertical: 0
   controlID: -1
 --- !u!114 &2
@@ -46,10 +53,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 463
     y: 81
     width: 721
     height: 775
+=======
+    x: 816
+    y: 81
+    width: 814
+    height: 639
+>>>>>>> Caméra--Jump--JumpAnimation
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -59,7 +73,11 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
   m_TargetSize: {x: 721, y: 754}
+=======
+  m_TargetSize: {x: 814, y: 458}
+>>>>>>> Caméra--Jump--JumpAnimation
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -68,16 +86,23 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -360.5
     m_HBaseRangeMax: 360.5
     m_VBaseRangeMin: -377
     m_VBaseRangeMax: 377
+=======
+    m_HBaseRangeMin: -407
+    m_HBaseRangeMax: 407
+    m_VBaseRangeMin: -229
+    m_VBaseRangeMax: 229
+>>>>>>> Caméra--Jump--JumpAnimation
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -95,16 +120,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
       width: 721
       height: 754
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 360.5, y: 377}
+=======
+      width: 814
+      height: 618
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 407, y: 309}
+>>>>>>> Caméra--Jump--JumpAnimation
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -360.5
       y: -377
       width: 721
@@ -112,6 +145,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 721, y: 775}
+=======
+      x: -407
+      y: -309
+      width: 814
+      height: 618
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 814, y: 639}
+>>>>>>> Caméra--Jump--JumpAnimation
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -136,10 +178,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1185
     height: 1298
   m_MinSize: {x: 505, y: 492}
   m_MaxSize: {x: 12005, y: 14042}
+=======
+    width: 1624
+    height: 931
+  m_MinSize: {x: 503, y: 321}
+  m_MaxSize: {x: 12003, y: 8021}
+>>>>>>> Caméra--Jump--JumpAnimation
   vertical: 1
   controlID: -1
 --- !u!114 &4
@@ -162,10 +211,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1185
     height: 796
   m_MinSize: {x: 505, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
+=======
+    width: 1624
+    height: 660
+  m_MinSize: {x: 503, y: 221}
+  m_MaxSize: {x: 12003, y: 4021}
+>>>>>>> Caméra--Jump--JumpAnimation
   vertical: 0
   controlID: -1
 --- !u!114 &5
@@ -186,7 +242,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 201
+<<<<<<< HEAD
     height: 796
+=======
+    height: 660
+>>>>>>> Caméra--Jump--JumpAnimation
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
@@ -215,17 +275,30 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1
     y: 81
     width: 200
     height: 775
+=======
+    x: 0
+    y: 19
+    width: 200
+    height: 639
+>>>>>>> Caméra--Jump--JumpAnimation
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 54f6ffff
       m_LastClickedID: 0
       m_ExpandedIDs: 9c54ffff
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 04f8ffff18f8ffff56faffff5afaffff5afbffff
+>>>>>>> Caméra--Jump--JumpAnimation
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -241,7 +314,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 5}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -266,8 +339,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 201
     y: 0
+<<<<<<< HEAD
     width: 261
     height: 796
+=======
+    width: 607
+    height: 660
+>>>>>>> Caméra--Jump--JumpAnimation
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 8}
@@ -276,7 +354,11 @@ MonoBehaviour:
   - {fileID: 9}
   - {fileID: 10}
   m_Selected: 0
+<<<<<<< HEAD
   m_LastSelected: 1
+=======
+  m_LastSelected: 2
+>>>>>>> Caméra--Jump--JumpAnimation
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,24 +380,37 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 202
     y: 81
     width: 259
     height: 775
+=======
+    x: 209
+    y: 81
+    width: 605
+    height: 639
+>>>>>>> Caméra--Jump--JumpAnimation
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: c07786d9d87ee974a89f34d920729d97
   m_Gizmos: 1
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -9.489596, y: -7.9038086, z: -358.0729}
     speed: 2
     m_Value: {x: -9.489596, y: -7.9038086, z: -358.0729}
+=======
+    m_Target: {x: 269.1787, y: 257.10938, z: -5.75}
+    speed: 2
+    m_Value: {x: 269.1787, y: 257.10938, z: -5.75}
+>>>>>>> Caméra--Jump--JumpAnimation
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -337,10 +432,10 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
+      m_Size: {x: 1, y: 1}
     yGrid:
       m_Fade:
         m_Target: 0
@@ -351,23 +446,29 @@ MonoBehaviour:
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
         m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
-    m_ShowGrid: 1
+    m_ShowGrid: 0
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: 0.14201926, y: -0.0044464227, z: -0.0006281346, w: -0.98987496}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: 0.14201628, y: -0.0044463295, z: -0.00062812143, w: -0.9898542}
   m_Size:
+<<<<<<< HEAD
     m_Target: 14.637253
     speed: 2
     m_Value: 14.637253
+=======
+    m_Target: 413.5882
+    speed: 2
+    m_Value: 413.5882
+>>>>>>> Caméra--Jump--JumpAnimation
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -439,14 +540,22 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 203
     y: 73
     width: 398
     height: 560
+=======
+    x: 202
+    y: 73
+    width: 617
+    height: 601
+>>>>>>> Caméra--Jump--JumpAnimation
   m_ViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
     - {fileID: 7878875912321326807, guid: caad5a51660947d48af435df0e555f9a, type: 2}
+<<<<<<< HEAD
     m_ValueSerializationHelper:
     - e00: 0.17142858
       e01: 0
@@ -456,6 +565,34 @@ MonoBehaviour:
       e11: 0.17142858
       e12: 0
       e13: 244.66975
+=======
+    - {fileID: 5826738972711116637, guid: c60bc47a46494c346bbd84fdea879f8a, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 0.33684212
+      e01: 0
+      e02: 0
+      e03: -1.8421173
+      e10: 0
+      e11: 0.33684212
+      e12: 0
+      e13: 248.0423
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.5857733
+      e01: 0
+      e02: 0
+      e03: -97.14432
+      e10: 0
+      e11: 0.5857733
+      e12: 0
+      e13: 110.354485
+>>>>>>> Caméra--Jump--JumpAnimation
       e20: 0
       e21: 0
       e22: 1
@@ -497,12 +634,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 462
     y: 0
     width: 723
     height: 796
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+    x: 808
+    y: 0
+    width: 816
+    height: 660
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> Caméra--Jump--JumpAnimation
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -518,12 +664,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
   m_Name: ProjectBrowser
+=======
+  m_Name: ConsoleWindow
+>>>>>>> Caméra--Jump--JumpAnimation
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 796
     width: 1185
     height: 502
@@ -535,6 +686,19 @@ MonoBehaviour:
   - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 1
+=======
+    y: 660
+    width: 1624
+    height: 271
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 13}
+  - {fileID: 14}
+  m_Selected: 1
+  m_LastSelected: 0
+>>>>>>> Caméra--Jump--JumpAnimation
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -556,10 +720,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1
     y: 877
     width: 1184
     height: 481
+=======
+    x: 5
+    y: 755
+    width: 1642
+    height: 255
+>>>>>>> Caméra--Jump--JumpAnimation
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -576,8 +747,9 @@ MonoBehaviour:
     m_Folders:
     - Assets/Photon/PhotonUnityNetworking/Resources
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 58
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Photon/PhotonUnityNetworking/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\burgb\Documents\RepoJV\Studio-Hoshigaru\Studio Hoshigaru
@@ -588,6 +760,18 @@ MonoBehaviour:
     m_SelectedIDs: 50760000
     m_LastClickedID: 30288
     m_ExpandedIDs: 0000000006760000087600000a7600000c7600000e76000010760000127600001476000016760000187600001a7600001c7600001e76000020760000227600002476000026760000287600002a7600002c7600002e76000030760000327600003476000036760000387600003a7600007876000000ca9a3b
+=======
+  - Assets/Scripts
+  m_LastFoldersGridSize: 58
+  m_LastProjectPath: D:\Code\Studio-Hoshigaru\Studio Hoshigaru
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 434}
+    m_SelectedIDs: be440000
+    m_LastClickedID: 17598
+    m_ExpandedIDs: 000000009444000096440000984400009a4400009c4400009e440000a0440000a2440000a4440000a6440000a8440000aa440000ac440000ae440000b0440000b2440000b4440000b6440000b8440000ba440000bc440000be440000c0440000c2440000c4440000c6440000c8440000
+>>>>>>> Caméra--Jump--JumpAnimation
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -615,7 +799,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000006760000087600000a7600000c7600000e76000010760000127600001476000016760000187600001a7600001c7600001e76000020760000227600002476000026760000287600002a7600002c7600002e76000030760000327600003476000036760000387600003a760000
+=======
+    m_ExpandedIDs: 000000009444000096440000984400009a4400009c4400009e440000a0440000a2440000a4440000a6440000a8440000aa440000ac440000ae440000b0440000b2440000b4440000b6440000b8440000ba440000bc440000be440000c0440000c2440000c4440000c6440000c8440000
+>>>>>>> Caméra--Jump--JumpAnimation
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -640,10 +828,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 54f6ffff
     m_LastClickedInstanceID: -2476
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000016410000a27b0000
+=======
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c623000016410000a27b0000ec4b000000000000
+>>>>>>> Caméra--Jump--JumpAnimation
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -668,9 +863,13 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 58
   m_SkipHiddenPackages: 0
+<<<<<<< HEAD
   m_DirectoriesAreaWidth: 310
+=======
+  m_DirectoriesAreaWidth: 233
+>>>>>>> Caméra--Jump--JumpAnimation
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -692,10 +891,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 654
-    width: 1548
-    height: 345
+    x: 8
+    y: 741
+    width: 1623
+    height: 250
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &15
 MonoBehaviour:
@@ -712,12 +911,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1185
     y: 0
     width: 284
     height: 1298
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+    x: 1624
+    y: 0
+    width: 280
+    height: 931
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> Caméra--Jump--JumpAnimation
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -744,10 +952,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1186
     y: 81
     width: 283
     height: 1277
+=======
+    x: 1632
+    y: 81
+    width: 279
+    height: 910
+>>>>>>> Caméra--Jump--JumpAnimation
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
