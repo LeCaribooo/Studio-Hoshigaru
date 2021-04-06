@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class Player_portal : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class Player_portal : MonoBehaviour
             {
                 DontDestroyOnLoad(joueur);
             }
-            
+
             
             LoadRandomRoom();
             
@@ -41,7 +42,7 @@ public class Player_portal : MonoBehaviour
     public void LoadRandomRoom()
     {
         //A faire -> implémenter l'aléatoire
-        SceneManager.LoadScene(2);
+        PhotonNetwork.LoadLevel(2);
         Debug.Log("Room Loaded");
     }
 }
