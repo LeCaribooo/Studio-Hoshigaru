@@ -61,6 +61,7 @@ public class PlayerControler : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         PlayerSO();
         PV = GetComponent<PhotonView>();
         playerDeath = GetComponent<PlayerDeath>();

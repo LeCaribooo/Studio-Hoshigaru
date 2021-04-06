@@ -25,11 +25,11 @@ public class Player_portal : MonoBehaviour
     {
        if (collider.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
         {
-            GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+            /*GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
             foreach (var joueur in player)
             {
                 DontDestroyOnLoad(joueur);
-            }
+            }*/
 
             
             LoadRandomRoom();
