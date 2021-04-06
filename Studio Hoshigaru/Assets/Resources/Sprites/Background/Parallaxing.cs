@@ -41,12 +41,6 @@ public class Parallaxing : MonoBehaviour
         {
             CheckCam();
         }
-
-        if (playerControler.isDead)
-        {
-            cam = playerControler.DisplayCameraWhenDead();
-        }
-
         //pour chaque background
         for (int i = 0; i < backgrounds.Length; i++)
         {

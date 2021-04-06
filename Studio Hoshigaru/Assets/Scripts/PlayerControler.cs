@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using System.IO;
 
 public class PlayerControler : MonoBehaviour
 {
     public PlayerSO playerSO;
-    public Health health;
 
     public PhotonView PV;
 
@@ -38,10 +38,11 @@ public class PlayerControler : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    private PlayerDeath playerDeath;
+
     public Canvas UI;
 
     public Camera camera;
-    int actualDisplay = 0;
 
     public bool isDead = false;
 
@@ -62,11 +63,13 @@ public class PlayerControler : MonoBehaviour
     {
         PlayerSO();
         PV = GetComponent<PhotonView>();
+        playerDeath = GetComponent<PlayerDeath>();
+        playerDeath.enabled = true;
         if (!PV.IsMine)
         {
             UI.enabled = false;
         }
-        health = GetComponent<Health>();
+        
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
         hitbox = GetComponent<CapsuleCollider2D>();
@@ -79,22 +82,22 @@ public class PlayerControler : MonoBehaviour
     {
         if (PV.IsMine)
         {
-           Move();
+             Move();
+            if (facingRight && movementInput > 0)
+            {
+                Flip();
+            }
+            else if (!facingRight && movementInput < 0)
+            {
+                Flip();
+            }
         }
 
-        if (facingRight == true && movementInput > 0)
-        {
-            PV.RPC("Flip", RpcTarget.All);
-        }
-        else if (facingRight == false && movementInput < 0)
-        {
-            PV.RPC("Flip", RpcTarget.All);
-        }
+        
     }
     
     private void Update()
     {
-        Death();
         if (PV.IsMine)
         {
             Jump();
@@ -163,7 +166,7 @@ public class PlayerControler : MonoBehaviour
     {
         if (attackStatus != 0)
         {
-            time += 1;
+            time += 1 ;
         }
         if (Input.GetMouseButtonDown(0) && attackStatus == 0)
         {
@@ -204,24 +207,7 @@ public class PlayerControler : MonoBehaviour
         attackHitboxCollider.enabled = isEnable;
     }
 
-    public void Death()
-    {
-        if (health.numOfHits <= 0)
-        {
-            isDead = true;
-        }
-        if (isDead)
-        {
-            DisableEverythingWhenDead();
-            if (PV.IsMine)
-            {
-                DisplayCameraWhenDead();
-            }   
-        }
-        
-    }
-
-    public void DisableEverythingWhenDead()
+    /*public void DisableEverythingWhenDead()
     {
         hitbox.enabled = false;
         animator.enabled = false;
@@ -232,23 +218,7 @@ public class PlayerControler : MonoBehaviour
         groundCheck.gameObject.SetActive(false);
         this.tag = "Untagged";
         camera.gameObject.SetActive(false);
-    }
-
-
-    public Transform DisplayCameraWhenDead()
-    {
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        Debug.Log("ON lance les caméras" + players.Length);
-        if (Input.GetMouseButtonDown(0))
-        {
-            players[actualDisplay].GetComponent<PlayerControler>().camera.gameObject.SetActive(false);
-            actualDisplay++;
-            actualDisplay = actualDisplay % players.Length;
-        }
-        players[actualDisplay].GetComponent<PlayerControler>().camera.gameObject.SetActive(true);
-        return players[actualDisplay].GetComponent<PlayerControler>().camera.transform;
-    }
-
+    }*/
 
     private void OnTriggerEnter2D(Collider2D other)
     {

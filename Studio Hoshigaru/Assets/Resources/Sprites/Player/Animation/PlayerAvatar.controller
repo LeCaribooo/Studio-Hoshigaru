@@ -373,12 +373,6 @@ AnimatorController:
   m_Name: PlayerAvatar
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Blend
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
   - m_Name: AttackStatus
     m_Type: 3
     m_DefaultFloat: 0
@@ -817,7 +811,7 @@ AnimatorStateMachine:
     m_Position: {x: 280, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9125182372826627762}
-    m_Position: {x: 510, y: 230, z: 0}
+    m_Position: {x: 510, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5647369972732778311}
     m_Position: {x: 750, y: 120, z: 0}

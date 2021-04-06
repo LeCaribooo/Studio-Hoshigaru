@@ -19,4 +19,17 @@ public class GameSetup : MonoBehaviour
             GameSetup.GS = this;
         }
     }
+
+    private void Start()
+    {
+        CreatePlayer();
+    }
+
+    private void CreatePlayer()
+    {
+        Debug.Log("On créer un perso");
+        //creates player network controller but not player character
+        PhotonNetwork.Instantiate(Path.Combine("Prefab", "Photon", "PhotonNetworkPlayer"), transform.position, Quaternion.identity, 0);
+
+    }
 }
