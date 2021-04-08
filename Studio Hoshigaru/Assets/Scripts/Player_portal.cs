@@ -8,16 +8,9 @@ public class Player_portal : MonoBehaviour
 {
     public GameObject Player;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public enum Scene {
+        Level1,
+        Level2
     }
 
 
@@ -25,11 +18,11 @@ public class Player_portal : MonoBehaviour
     {
        if (collider.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
         {
-            /*GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+            GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
             foreach (var joueur in player)
             {
                 DontDestroyOnLoad(joueur);
-            }*/
+            }
 
             
             LoadRandomRoom();
@@ -41,8 +34,10 @@ public class Player_portal : MonoBehaviour
     //Tp
     public void LoadRandomRoom()
     {
-        //A faire -> implémenter l'aléatoire
-        PhotonNetwork.LoadLevel(2);
-        Debug.Log("Room Loaded");
+        int nbLvl = Random.Range(0,2); //Je génère une scène aléatoire
+        Scene scene = (Scene)nbLvl; 
+        string lvl = scene.ToString(); //Je prend son string
+        PhotonNetwork.LoadLevel(lvl);
+        Debug.Log("Room Loaded" + lvl );
     }
 }
