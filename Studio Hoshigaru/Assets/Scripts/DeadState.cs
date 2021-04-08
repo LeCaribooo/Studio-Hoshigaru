@@ -35,14 +35,19 @@ public class DeadState : MonoBehaviour
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         if (players.Length == 0)
-            return null;
-        if (Input.GetMouseButtonDown(0))
         {
-            players[actualDisplay].GetComponent<PlayerControler>().camera.gameObject.SetActive(false);
-            actualDisplay++;
-            actualDisplay = actualDisplay % players.Length;
+            return null;
         }
-        players[actualDisplay].GetComponent<PlayerControler>().camera.gameObject.SetActive(true);
-        return players[actualDisplay].GetComponent<PlayerControler>().camera.transform;
+        else
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                players[actualDisplay].GetComponent<PlayerControler>().camera.gameObject.SetActive(false);
+                actualDisplay++;
+                actualDisplay = actualDisplay % players.Length;
+            }
+            players[actualDisplay].GetComponent<PlayerControler>().camera.gameObject.SetActive(true);
+            return players[actualDisplay].GetComponent<PlayerControler>().camera.transform;
+        }
     }
 }

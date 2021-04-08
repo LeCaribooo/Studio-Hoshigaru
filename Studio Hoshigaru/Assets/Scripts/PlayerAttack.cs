@@ -7,17 +7,78 @@ using Photon.Pun;
 public class PlayerAttack : MonoBehaviour
 {
     private PhotonView PV;
+    private int attackStatus;
+    private float time;
+    public GameObject attackHitbox;
+    private CapsuleCollider2D attackHitboxCollider;
+    public Animator animator;
+
+    public bool canAttack;
 
     private void Start()
     {
+        canAttack = true;
         PV = GetComponentInParent<PhotonView>();
+        attackHitboxCollider = attackHitbox.GetComponent<CapsuleCollider2D>();
+        attackHitboxCollider.enabled = false;
+        time = 0;
+        attackStatus = 0;
     }
-    private void OnTriggerEnter2D(Collider2D other)
+
+    private void Update()
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (PV.IsMine)
         {
-            EnemyController enemyController = other.gameObject.GetComponent<EnemyController>();
-            enemyController.health -= 5;
+            Attack();
         }
+    }
+
+    public void Attack()
+    {
+        //On reset le tout 
+        if (!canAttack || time > 0.8) 
+        {
+            UpdateAttack(false,0) ;
+        }
+        else
+        {
+            //On incrémente notre timer en secondes
+            if (attackStatus != 0)
+            {
+                time += Time.deltaTime;
+            }
+            //On presse le bouton d'attaque
+            if(Input.GetMouseButtonDown(0))
+            {
+                if (attackStatus == 0 || (attackStatus == 2 && time > 0.2))
+                {
+                    UpdateAttack(true,1);
+                }
+                else if (attackStatus == 1 && time > 0.2)
+                {
+                    UpdateAttack(true,2);
+                }
+            }
+        }
+        //On met à jour la hitbox d'attaque
+        if(time > 0.15)
+        {
+            PV.RPC("AttackEnabled", RpcTarget.All, false);
+        }       
+    }
+
+    private void UpdateAttack(bool update,int attackStatus)
+    {
+        time = 0;
+        this.attackStatus = attackStatus;
+        if(update)
+            PV.RPC("AttackEnabled", RpcTarget.All, true);
+        animator.SetInteger("AttackStatus", attackStatus);
+    }
+
+    [PunRPC]
+    void AttackEnabled(bool isEnable)
+    {
+        attackHitboxCollider.enabled = isEnable;
     }
 }

@@ -265,7 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5203060877371313187}
   - component: {fileID: 192723677657309998}
-  - component: {fileID: 3788383656971199154}
+  - component: {fileID: 2052923193429617808}
   m_Layer: 0
   m_Name: AttackHitbox
   m_TagString: Untagged
@@ -294,7 +294,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2790065843988774758}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -303,7 +303,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.13280118, y: 0.19637519}
   m_Size: {x: 0.69348216, y: 1.2119061}
   m_Direction: 0
---- !u!114 &3788383656971199154
+--- !u!114 &2052923193429617808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2790065843988774758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83524959c629a0b439514572689d0ba8, type: 3}
+  m_Script: {fileID: 11500000, guid: 10b30b7085bce4b46ba88a232db2d838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2920987126117547592
@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: -5369199426318173991}
   - component: {fileID: 8745890432335679497}
   - component: {fileID: -8179091385658156817}
+  - component: {fileID: 6628421314790985264}
   - component: {fileID: -6244049647554235959}
   - component: {fileID: -5198743702041084537}
   - component: {fileID: 7890237667542156627}
@@ -596,10 +597,8 @@ MonoBehaviour:
   PV: {fileID: 0}
   animator: {fileID: -5369199426318173991}
   groundCheck: {fileID: 5296357941224267156}
-  attackHitbox: {fileID: 2790065843988774758}
   UI: {fileID: 4826391124493585124}
   camera: {fileID: 5368359382360323570}
-  isDead: 0
 --- !u!114 &-8179091385658156817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,6 +634,21 @@ MonoBehaviour:
     type: 3}
   fullHeart: {fileID: -210901858234549111, guid: 8b92d9bdeeea12e4ea575db9d7666725,
     type: 3}
+--- !u!114 &6628421314790985264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073380840126637068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83524959c629a0b439514572689d0ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackHitbox: {fileID: 2790065843988774758}
+  animator: {fileID: -5369199426318173991}
+  canAttack: 0
 --- !u!114 &-6244049647554235959
 MonoBehaviour:
   m_ObjectHideFlags: 0

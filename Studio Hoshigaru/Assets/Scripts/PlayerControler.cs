@@ -29,23 +29,14 @@ public class PlayerControler : MonoBehaviour
     private int extraJumpsValue;
     private int extraJumps;
 
-    private int attackStatus = 0;
-    private int time = 0;
-    public GameObject attackHitbox;
-    private CapsuleCollider2D attackHitboxCollider;
-
     private bool facingRight = true;
 
-    private SpriteRenderer spriteRenderer;
-
     private PlayerDeath playerDeath;
+    private PlayerAttack playerAttack;
 
     public Canvas UI;
 
     public Camera camera;
-
-    public bool isDead = false;
-
 
     void PlayerSO()
     {
@@ -66,17 +57,14 @@ public class PlayerControler : MonoBehaviour
         PV = GetComponent<PhotonView>();
         playerDeath = GetComponent<PlayerDeath>();
         playerDeath.enabled = true;
+        playerAttack = GetComponent<PlayerAttack>();
         if (!PV.IsMine)
         {
             UI.enabled = false;
         }
-        
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
         hitbox = GetComponent<CapsuleCollider2D>();
-        attackHitboxCollider = attackHitbox.GetComponent<CapsuleCollider2D>();
-        attackHitboxCollider.enabled = false;
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -84,17 +72,11 @@ public class PlayerControler : MonoBehaviour
         if (PV.IsMine)
         {
              Move();
-            if (facingRight && movementInput > 0)
-            {
-                Flip();
-            }
-            else if (!facingRight && movementInput < 0)
+            if ((facingRight && movementInput > 0) || (!facingRight && movementInput < 0))
             {
                 Flip();
             }
         }
-
-        
     }
     
     private void Update()
@@ -102,7 +84,6 @@ public class PlayerControler : MonoBehaviour
         if (PV.IsMine)
         {
             Jump();
-            Attack();
         }   
     }
 
@@ -113,10 +94,12 @@ public class PlayerControler : MonoBehaviour
             movementSpeed = playerSO.movementSpeed;
             extraJumps = extraJumpsValue;
             jumpTimeCounter = jumpTime;
+            playerAttack.canAttack = true;
             animator.SetBool("isJumping", false);
         }
         else
         {
+            playerAttack.canAttack = false; 
             animator.SetBool("isJumping", true);
         }
 
@@ -137,7 +120,6 @@ public class PlayerControler : MonoBehaviour
             }
         }           
     }
-
     
     void Move()
     {
@@ -154,7 +136,6 @@ public class PlayerControler : MonoBehaviour
         rb.velocity = new Vector2(movementInput * movementSpeed, rb.velocity.y); //Déplace le rigibody
     }
 
-    [PunRPC]
     void Flip()
     {
         facingRight = !facingRight;
@@ -162,64 +143,6 @@ public class PlayerControler : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
-
-    public void Attack()
-    {
-        if (attackStatus != 0)
-        {
-            time += 1 ;
-        }
-        if (Input.GetMouseButtonDown(0) && attackStatus == 0)
-        {
-            PV.RPC("AttackEnabled", RpcTarget.All, false);
-            attackStatus += 1;
-            animator.SetInteger("AttackStatus", attackStatus);
-            PV.RPC("AttackEnabled", RpcTarget.All, true);
-        }
-        else if (Input.GetMouseButtonDown(0) && attackStatus == 1 && time > 50)
-        {
-            PV.RPC("AttackEnabled", RpcTarget.All, false);
-            time = 0;
-            attackStatus += 1;
-            animator.SetInteger("AttackStatus", attackStatus);
-            PV.RPC("AttackEnabled", RpcTarget.All, true);
-        }
-        else if (Input.GetMouseButtonDown(0) && attackStatus == 2 && time > 50)
-        {
-            PV.RPC("AttackEnabled", RpcTarget.All, false);
-            time = 0;
-            attackStatus -= 1;
-            animator.SetInteger("AttackStatus", attackStatus);
-            PV.RPC("AttackEnabled", RpcTarget.All, true);
-
-        }
-        else if (time > 100)
-        {
-            time = 0;
-            attackStatus = 0;
-            animator.SetInteger("AttackStatus", attackStatus);
-            PV.RPC("AttackEnabled", RpcTarget.All, false);
-        }
-    }
-
-    [PunRPC]
-    void AttackEnabled(bool isEnable)
-    {
-        attackHitboxCollider.enabled = isEnable;
-    }
-
-    /*public void DisableEverythingWhenDead()
-    {
-        hitbox.enabled = false;
-        animator.enabled = false;
-        attackHitbox.SetActive(false);
-        UI.enabled = false;
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        spriteRenderer.enabled = false;
-        groundCheck.gameObject.SetActive(false);
-        this.tag = "Untagged";
-        camera.gameObject.SetActive(false);
-    }*/
 
     private void OnTriggerEnter2D(Collider2D other)
     {

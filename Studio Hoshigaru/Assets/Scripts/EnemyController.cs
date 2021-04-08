@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour
         float enemyvelocity = Mathf.Abs(aIPath.velocity.x);
         animator.SetFloat("speed", enemyvelocity);
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -40,7 +41,6 @@ public class EnemyController : MonoBehaviour
     {
         Attack(other);
     }
-    
 
     [PunRPC]
     public void Death()
@@ -49,7 +49,6 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(this.gameObject);
             GameObject.Find("DarkAngel").SetActive(false);
-            
         }
     }
 
@@ -62,7 +61,6 @@ public class EnemyController : MonoBehaviour
             health.numOfHits -= enemySO.damage;
         }  
     }
-
     
     private void SetAsChild()
     {
