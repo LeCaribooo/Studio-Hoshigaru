@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
+using Photon.Realtime;
 
-public class Player_portal : MonoBehaviour
+public class Player_portal : MonoBehaviourPun
 {
     public GameObject Player;
     
@@ -18,20 +19,20 @@ public class Player_portal : MonoBehaviour
     {
        if (collider.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
         {
-            GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+            /*GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
             foreach (var joueur in player)
             {
                 DontDestroyOnLoad(joueur);
-            }
+            }*/
 
-            
-            LoadRandomRoom();
+            SendNotif();
+            //LoadRandomRoom();
             
         }
 
     }
 
-    //Tp
+    //Teleportation
     public void LoadRandomRoom()
     {
         int nbLvl = Random.Range(0,2); //Je génère une scène aléatoire
@@ -40,4 +41,16 @@ public class Player_portal : MonoBehaviour
         PhotonNetwork.LoadLevel(lvl);
         Debug.Log("Room Loaded" + lvl );
     }
+
+    public void SendNotif()
+    {
+        base.photonView.RPC("SendMessage", RpcTarget.All, "Hello there");
+    }
+    
+    [PunRPC]
+    void SendMessage(string message)
+    {
+        Debug.Log("Message envoyé :" + message);
+    }
+
 }
