@@ -8,6 +8,7 @@ using Photon.Realtime;
 public class Player_portal : MonoBehaviourPun
 {
     public GameObject Player;
+    public Canvas Vote; 
     
     public enum Scene {
         Level1,
@@ -19,13 +20,14 @@ public class Player_portal : MonoBehaviourPun
     {
        if (collider.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
         {
-            /*GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+            GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
             foreach (var joueur in player)
             {
                 DontDestroyOnLoad(joueur);
-            }*/
+            }
 
             SendNotif();
+            //Enlever les //
             //LoadRandomRoom();
             
         }
@@ -50,6 +52,7 @@ public class Player_portal : MonoBehaviourPun
     [PunRPC]
     void SendMessage(string message)
     {
+        Vote.gameObject.SetActive(true);
         Debug.Log("Message envoyé :" + message);
     }
 
