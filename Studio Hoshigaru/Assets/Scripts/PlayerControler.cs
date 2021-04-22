@@ -7,6 +7,8 @@ using System.IO;
 
 public class PlayerControler : MonoBehaviour
 {
+    [SerializeField] private GameObject bow;
+
     public PlayerSO playerSO;
 
     public PhotonView PV;
@@ -29,10 +31,10 @@ public class PlayerControler : MonoBehaviour
     private int extraJumpsValue;
     private int extraJumps;
 
-    private bool facingRight = true;
+    [HideInInspector] public bool facingRight = true;
 
     private PlayerDeath playerDeath;
-    private PlayerAttack playerAttack;
+    [SerializeField] private Sword sword;
 
     public Canvas UI;
 
@@ -57,7 +59,6 @@ public class PlayerControler : MonoBehaviour
         PV = GetComponent<PhotonView>();
         playerDeath = GetComponent<PlayerDeath>();
         playerDeath.enabled = true;
-        playerAttack = GetComponent<PlayerAttack>();
         if (!PV.IsMine)
         {
             UI.enabled = false;
@@ -94,12 +95,12 @@ public class PlayerControler : MonoBehaviour
             movementSpeed = playerSO.movementSpeed;
             extraJumps = extraJumpsValue;
             jumpTimeCounter = jumpTime;
-            playerAttack.canAttack = true;
+            sword.canAttack = true;
             animator.SetBool("isJumping", false);
         }
         else
         {
-            playerAttack.canAttack = false; 
+            sword.canAttack = false; 
             animator.SetBool("isJumping", true);
         }
 
@@ -136,12 +137,15 @@ public class PlayerControler : MonoBehaviour
         rb.velocity = new Vector2(movementInput * movementSpeed, rb.velocity.y); //Déplace le rigibody
     }
 
-    void Flip()
+    public void Flip()
     {
         facingRight = !facingRight;
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+        Vector3 ScalerBow = bow.transform.localScale;
+        ScalerBow.x *= -1;
+        bow.transform.localScale = ScalerBow;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
