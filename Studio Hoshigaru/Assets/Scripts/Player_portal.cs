@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
@@ -8,31 +9,96 @@ using Photon.Realtime;
 public class Player_portal : MonoBehaviourPun
 {
     public GameObject Player;
-    public Canvas Vote; 
-    
+    public Canvas Vote;
+    public Canvas Level;
+    public Button LevelVote;
+    public Text text;
+    public Text Count;
+    private bool VoteThrow = false;
+    private bool HasClickE = false;
+    private bool ready = false;
+    public Button Ready;
+    [SerializeField] Text readyUpText;
+    private bool WantToTeleport = false;
+
+    private List<bool> playerReady = new List<bool>();
+
+
+    //Timer
+    float time = 21f;
+
     public enum Scene {
         Level1,
         Level2
     }
 
-
-    private void OnTriggerStay2D(Collider2D collider)
+    GameObject getMinePlayer()
     {
-       if (collider.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        GameObject[] joueur = GameObject.FindGameObjectsWithTag("Player");
+        for (int i = 0; i < joueur.Length; i++)
         {
-            GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
-            foreach (var joueur in player)
+            if (joueur[i].GetPhotonView().IsMine)
             {
-                DontDestroyOnLoad(joueur);
+                return joueur[i];
             }
-
-            SendNotif();
-            //Enlever les //
-            //LoadRandomRoom();
-            
         }
-
+        //Pas censé arrivé.
+        Debug.Log("Tu n'existes pas...");
+        return null;
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && !VoteThrow && collision.gameObject == getMinePlayer())
+        {
+            Level.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && collision.gameObject == getMinePlayer())
+        {
+            Level.gameObject.SetActive(false);
+        }
+    }
+
+    public void Click_ToVote()
+    {
+        Level.gameObject.SetActive(false);
+        VoteThrow = true;
+        GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+        foreach (var joueur in player)
+        {                
+            DontDestroyOnLoad(joueur);
+        }
+        SendNotif();
+
+        VoteCanvas();
+        
+    }
+    private void Update()
+    {
+        if (HasClickE)
+        {
+            time -= Time.deltaTime;
+            int sec = (int)time;
+            text.text = sec.ToString();
+            Count.text = playerReady.Count.ToString() + " / " + PhotonNetwork.PlayerList.Length.ToString();
+            WantToTeleport = playerReady.Count == PhotonNetwork.PlayerList.Length;
+            if (time <= 0f  || WantToTeleport) 
+            {
+                HasClickE = false;
+                Vote.gameObject.SetActive(false);
+                time = 21f;
+                if (WantToTeleport)
+                {
+                    LoadRandomRoom();
+                }
+                VoteThrow = false;
+            }
+        }
+    }
+
 
     //Teleportation
     public void LoadRandomRoom()
@@ -48,12 +114,52 @@ public class Player_portal : MonoBehaviourPun
     {
         base.photonView.RPC("SendMessage", RpcTarget.All, "Hello there");
     }
-    
+
+    public void VoteCanvas()
+    {
+        base.photonView.RPC("VoteRPC", RpcTarget.All);
+    }
+
+    public void OnClick_ReadyUp()
+    {
+        SetReadyUp(!ready);
+    }
+    private void SetReadyUp(bool state)
+    {
+        ready = state;
+        if (ready)
+        {
+            readyUpText.text = "" +
+                "Ready";
+            Ready.interactable = false;
+            base.photonView.RPC("PlayerReady", RpcTarget.All, ready);
+        }
+        else
+            readyUpText.text = "Not ready";
+    }
+
     [PunRPC]
+    //Envoie la notif à tout le monde.
     void SendMessage(string message)
     {
         Vote.gameObject.SetActive(true);
+        int nb = PhotonNetwork.PlayerList.Length;
         Debug.Log("Message envoyé :" + message);
+        Debug.Log("Nombre de joueur :" + nb);
+    }
+
+    [PunRPC]
+    //Attend le vote de tout le monde.
+    void VoteRPC()
+    {
+        HasClickE = true;
+    }
+
+    [PunRPC]
+    void PlayerReady(bool state)
+    {
+        Debug.Log("Player ready ");
+        playerReady.Add(state);
     }
 
 }
