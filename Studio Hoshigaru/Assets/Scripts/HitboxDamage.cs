@@ -8,8 +8,8 @@ public class HitboxDamage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            EnemyController enemyController = other.gameObject.GetComponent<EnemyController>();
-            enemyController.health -= 5;
+            EnemyHealth enemyhealth = other.gameObject.GetComponent<EnemyHealth>();
+            enemyhealth.health -= 5;
         }
     }
 }

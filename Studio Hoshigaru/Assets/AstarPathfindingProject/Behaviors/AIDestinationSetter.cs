@@ -22,21 +22,21 @@ namespace Pathfinding {
 
 		public Transform whichTarget()
         {
-			players = GameObject.FindGameObjectsWithTag("Player");
-			if (players.Length == 0)
-				return null;
-			float minDist = Mathf.Infinity;
-			GameObject currCloser = players[0];
-			foreach (GameObject player in players)
-			{
-				float distance = Vector3.Distance(this.transform.position, player.transform.position);
-				if (distance < minDist)
+				players = GameObject.FindGameObjectsWithTag("Player");
+				if (players.Length == 0)
+					return null;
+				float minDist = Mathf.Infinity;
+				GameObject currCloser = players[0];
+				foreach (GameObject player in players)
 				{
-					currCloser = player;
-					minDist = distance;
+					float distance = Vector3.Distance(this.transform.position, player.transform.position);
+					if (distance < minDist)
+					{
+						currCloser = player;
+						minDist = distance;
+					}
 				}
-			}
-			return currCloser.transform;
+				return currCloser.transform;
 		}
 
 		void OnEnable () {

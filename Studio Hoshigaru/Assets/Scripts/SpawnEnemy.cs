@@ -21,7 +21,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         if(collider2D.enabled == false && !isSpawned)
         {
-            PhotonNetwork.InstantiateSceneObject(Path.Combine("Prefab", "Enemy", "DarkAngelPrefab"), EnemySpawner.transform.position, Quaternion.identity);
+            PhotonNetwork.Instantiate(Path.Combine("Prefab", "Enemy", "DarkAngel 1"), new Vector3(0,-11,0), Quaternion.identity);
             isSpawned = true;
         }
     }
