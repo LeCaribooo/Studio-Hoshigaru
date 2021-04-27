@@ -27,7 +27,7 @@ public class Player_portal : MonoBehaviourPun
 
     //Timer
     float time = 21f;
-    float decount = 4f;
+    
     public enum Scene {
         Level1,
         Level2
@@ -118,7 +118,9 @@ public class Player_portal : MonoBehaviourPun
         int nbLvl = Random.Range(0,2); //Je génère une scène aléatoire
         Scene scene = (Scene)nbLvl; 
         string lvl = scene.ToString(); //Je prend son string
-        PhotonNetwork.LoadLevel(lvl);
+        
+        // A MOODIFIER
+        PhotonNetwork.LoadLevel("Level1");
         Debug.Log("Room Loaded" + lvl );
     }
 
