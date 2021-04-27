@@ -16,11 +16,12 @@ public class EnemyGFX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(aIPath.desiredVelocity.x >= 0.01f)
+
+        if (aIPath.desiredVelocity.x >= 0.01f)
         {
             transform.localScale = new Vector3(-0.225f, 0.2175f, 1f);
         }
-        else if(aIPath.desiredVelocity.x <=  -0.01f)
+        else if (aIPath.desiredVelocity.x <= -0.01f)
         {
             transform.localScale = new Vector3(0.255f, 0.2175f, 1f);
         }

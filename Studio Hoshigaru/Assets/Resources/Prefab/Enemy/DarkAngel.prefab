@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: -7410934906265117654}
   - component: {fileID: 6535443133040279244}
   - component: {fileID: 2502479398619345192}
+  - component: {fileID: 5191038931301254777}
   m_Layer: 0
   m_Name: DarkAngel
   m_TagString: Enemy
@@ -228,6 +229,18 @@ MonoBehaviour:
   healthbar: {fileID: 8249583254787802149}
   enemySO: {fileID: 11400000, guid: 24e9a6bfa7ffee6428697809afd7fb51, type: 2}
   health: 0
+--- !u!114 &5191038931301254777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126681123709049919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c2a6b8fcf6d6341bc53142bd37bd89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3940378510770308500
 GameObject:
   m_ObjectHideFlags: 0
