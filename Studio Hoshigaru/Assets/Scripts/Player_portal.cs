@@ -11,10 +11,11 @@ public class Player_portal : MonoBehaviourPun
     public GameObject Player;
     public Canvas Vote;
     public Canvas Level;
+    public Canvas DecompteCanvas;
     public Button LevelVote;
     public Text text;
     public Text Count;
-    private bool VoteThrow = false;
+    public Text DecompteTxt;
     private bool HasClickE = false;
     private bool ready = false;
     public Button Ready;
@@ -26,7 +27,7 @@ public class Player_portal : MonoBehaviourPun
 
     //Timer
     float time = 21f;
-
+    float decount = 4f;
     public enum Scene {
         Level1,
         Level2
@@ -48,10 +49,17 @@ public class Player_portal : MonoBehaviourPun
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && !VoteThrow && collision.gameObject == getMinePlayer())
+
+        if (collision.gameObject.tag == "Player" &&  collision.gameObject == getMinePlayer())
         {
             Level.gameObject.SetActive(true);
+            if (HasClickE)
+            {
+                LevelVote.gameObject.SetActive(false);
+            }
         }
+        
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -65,7 +73,6 @@ public class Player_portal : MonoBehaviourPun
     public void Click_ToVote()
     {
         Level.gameObject.SetActive(false);
-        VoteThrow = true;
         GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
         foreach (var joueur in player)
         {                
@@ -82,19 +89,24 @@ public class Player_portal : MonoBehaviourPun
         {
             time -= Time.deltaTime;
             int sec = (int)time;
-            text.text = sec.ToString();
+            text.text = "00 : " + sec.ToString();
             Count.text = playerReady.Count.ToString() + " / " + PhotonNetwork.PlayerList.Length.ToString();
             WantToTeleport = playerReady.Count == PhotonNetwork.PlayerList.Length;
             if (time <= 0f  || WantToTeleport) 
             {
-                HasClickE = false;
+                LevelVote.gameObject.SetActive(false);
                 Vote.gameObject.SetActive(false);
                 time = 21f;
                 if (WantToTeleport)
                 {
-                    LoadRandomRoom();
+                    StartCoroutine(Decompte());
                 }
-                VoteThrow = false;
+                else
+                {
+                    LevelVote.gameObject.SetActive(true);
+                }
+                HasClickE = false;
+                
             }
         }
     }
@@ -129,8 +141,7 @@ public class Player_portal : MonoBehaviourPun
         ready = state;
         if (ready)
         {
-            readyUpText.text = "" +
-                "Ready";
+            readyUpText.text = "Ready !";
             Ready.interactable = false;
             base.photonView.RPC("PlayerReady", RpcTarget.All, ready);
         }
@@ -138,6 +149,20 @@ public class Player_portal : MonoBehaviourPun
             readyUpText.text = "Not ready";
     }
 
+    IEnumerator Decompte()
+    {
+        DecompteCanvas.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        DecompteTxt.text = "2";
+        yield return new WaitForSeconds(1f);
+        DecompteTxt.text = "1";
+        yield return new WaitForSeconds(1f);
+        DecompteTxt.text = "Iku !";
+        yield return new WaitForSeconds(1.2f);
+        DecompteCanvas.gameObject.SetActive(false);
+        LoadRandomRoom();
+    }
+    
     [PunRPC]
     //Envoie la notif à tout le monde.
     void SendMessage(string message)
