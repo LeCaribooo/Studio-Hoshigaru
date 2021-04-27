@@ -39,6 +39,22 @@ public class PlayerControler : MonoBehaviour
     public Canvas UI;
 
     public Camera camera;
+    
+    private static PlayerControler playerInstance;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
+
+        if (playerInstance == null)
+        {
+            playerInstance = this;
+        }
+        else
+        {
+            DestroyObject(gameObject);
+        }
+    }
 
     void PlayerSO()
     {
