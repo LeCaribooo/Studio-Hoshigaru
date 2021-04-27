@@ -9,7 +9,7 @@ public class Sword : MonoBehaviour
     [SerializeField] private PhotonView PV;
     private int attackStatus;
     private float time;
-    public CapsuleCollider2D attackHitboxCollider;
+    public BoxCollider2D attackHitboxCollider;
     public Animator animator;
 
     public bool canAttack;

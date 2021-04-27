@@ -148,6 +148,11 @@ public class PlayerControler : MonoBehaviour
         bow.transform.localScale = ScalerBow;
     }
 
+    public void SetAttackStatus(int AttackStatus)
+    {
+        animator.SetInteger("AttackStatus", AttackStatus);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))

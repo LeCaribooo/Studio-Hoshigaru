@@ -39,7 +39,6 @@ MonoBehaviour:
   - DestroyRpc
   - DestroySpaceship
   - Fire
-  - Flip
   - IsTrigger
   - RespawnSpaceship
   - RPC_ChangeReadyState

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bow : MonoBehaviour
 {
-    [SerializeField] private Camera camera;
+
 
     public GameObject arrow;
     public float launchForce;
@@ -15,19 +15,11 @@ public class Bow : MonoBehaviour
     public int numberOfPoints;
     public float spaceBetweenPoints;
 
-    Vector2 direction;
-
-    private void Start()
-    {
-        
-    }
+    public AnimatedArms animatedArms;
 
     void Update()
     {
-        Vector2 bowPosition = transform.position;
-        Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
-        direction = mousePosition - bowPosition;
-        transform.right = direction;
+       
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
@@ -47,7 +39,7 @@ public class Bow : MonoBehaviour
 
     Vector2 PointPosition(float t)
     {
-        Vector2 position = (Vector2)shotPoint.position + (direction.normalized * launchForce * t) + 0.5f * Physics2D.gravity * (t * t);
+        Vector2 position = (Vector2)shotPoint.position + (animatedArms.direction.normalized * launchForce * t) + 0.5f * Physics2D.gravity * (t * t);
         return position;
     }
 
