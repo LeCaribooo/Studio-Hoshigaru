@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":218.20909118652345,"y":119.10232543945313,"z":-178.8125},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":122.33729553222656,"orthographic":true}
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-16.888561248779298,"y":-12.868307113647461,"z":-164.37962341308595},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":36.932640075683597,"orthographic":true}
 >>>>>>> DieAndRetry
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":224.5579833984375,"y":241.1228485107422,"z":-15.004505157470704},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":447.5853271484375,"orthographic":true}
+>>>>>>> Bowfirst
