@@ -25,6 +25,11 @@ ScriptsOnlyBuild:
     - RoomListItem
     - Rooms
     - SpawnEnemy
+<<<<<<< HEAD
+=======
+    - SpawnRoom
+    - TestConnect
+>>>>>>> DieAndRetry
     AstarPathfindingProject.dll:
     - AstarPath
     - Pathfinding.AIDestinationSetter
@@ -52,11 +57,24 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
+    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
+    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    Unity.2D.Tilemap.Extras.Editor.dll:
+    - UnityEditor.Tilemaps.CoordinateBrush
+    - UnityEditor.Tilemaps.GameObjectBrush
+    - UnityEditor.Tilemaps.GroupBrush
+    - UnityEditor.Tilemaps.LineBrush
+    - UnityEditor.Tilemaps.RandomBrush
+    - UnityEditor.Tilemaps.TintBrush
+    - UnityEditor.Tilemaps.TintBrushSmooth
     Unity.2D.Tilemap.Extras.dll:
     - UnityEngine.Tilemaps.AnimatedTile
     Unity.Rider.Editor.dll:
@@ -80,7 +98,11 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
+<<<<<<< HEAD
     Assets/Scenes/D&R/Level 1-1.unity:
+=======
+    Assets/Scenes/D&R/Level1.unity:
+>>>>>>> DieAndRetry
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -103,6 +125,56 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 614}
+<<<<<<< HEAD
+=======
+    - Class: 114
+      Script: {instanceID: 12738}
+    - Class: 114
+      Script: {instanceID: 12852}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 19719996
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
+      Script: {instanceID: 0}
+    Assets/Scenes/D&R/Level2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 66
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 614}
+    - Class: 114
+      Script: {instanceID: 12738}
+    - Class: 114
+      Script: {instanceID: 12852}
+>>>>>>> DieAndRetry
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -176,6 +248,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11274}
     - Class: 114
       Script: {instanceID: 11276}
+<<<<<<< HEAD
     - Class: 114
       Script: {instanceID: 11300}
     - Class: 114
@@ -234,11 +307,74 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13616}
     - Class: 114
       Script: {instanceID: 13628}
+=======
+    - Class: 114
+      Script: {instanceID: 11458}
+    - Class: 114
+      Script: {instanceID: 11514}
+    - Class: 114
+      Script: {instanceID: 11532}
+    - Class: 114
+      Script: {instanceID: 11570}
+    - Class: 114
+      Script: {instanceID: 11586}
+    - Class: 114
+      Script: {instanceID: 11614}
+    - Class: 114
+      Script: {instanceID: 11672}
+    - Class: 114
+      Script: {instanceID: 11730}
+    - Class: 114
+      Script: {instanceID: 11814}
+    - Class: 114
+      Script: {instanceID: 11932}
+    - Class: 114
+      Script: {instanceID: 11968}
+    - Class: 114
+      Script: {instanceID: 12332}
+    - Class: 114
+      Script: {instanceID: 12352}
+    - Class: 114
+      Script: {instanceID: 12538}
+    - Class: 114
+      Script: {instanceID: 12628}
+    - Class: 114
+      Script: {instanceID: 12638}
+    - Class: 114
+      Script: {instanceID: 12672}
+    - Class: 114
+      Script: {instanceID: 12728}
+    - Class: 114
+      Script: {instanceID: 12770}
+    - Class: 114
+      Script: {instanceID: 12962}
+    - Class: 114
+      Script: {instanceID: 12988}
+    - Class: 114
+      Script: {instanceID: 13058}
+    - Class: 114
+      Script: {instanceID: 13082}
+    - Class: 114
+      Script: {instanceID: 13198}
+    - Class: 114
+      Script: {instanceID: 13456}
+    - Class: 114
+      Script: {instanceID: 13508}
+    - Class: 114
+      Script: {instanceID: 13598}
+    - Class: 114
+      Script: {instanceID: 13606}
+    - Class: 114
+      Script: {instanceID: 13618}
+    - Class: 114
+      Script: {instanceID: 13738}
+>>>>>>> DieAndRetry
     - Class: 114
       Script: {instanceID: 13748}
     - Class: 114
       Script: {instanceID: 13758}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 13768}
     - Class: 114
       Script: {instanceID: 13794}
@@ -262,6 +398,37 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15214}
     - Class: 114
       Script: {instanceID: 15298}
+=======
+      Script: {instanceID: 13784}
+    - Class: 114
+      Script: {instanceID: 14116}
+    - Class: 114
+      Script: {instanceID: 14154}
+    - Class: 114
+      Script: {instanceID: 14164}
+    - Class: 114
+      Script: {instanceID: 14170}
+    - Class: 114
+      Script: {instanceID: 14416}
+    - Class: 114
+      Script: {instanceID: 14962}
+    - Class: 114
+      Script: {instanceID: 15016}
+    - Class: 114
+      Script: {instanceID: 15054}
+    - Class: 114
+      Script: {instanceID: 15094}
+    - Class: 114
+      Script: {instanceID: 15162}
+    - Class: 114
+      Script: {instanceID: 15164}
+    - Class: 114
+      Script: {instanceID: 15200}
+    - Class: 114
+      Script: {instanceID: 15204}
+    - Class: 114
+      Script: {instanceID: 15288}
+>>>>>>> DieAndRetry
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -338,10 +505,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 614}
     - Class: 114
+      Script: {instanceID: 11266}
+    - Class: 114
       Script: {instanceID: 11274}
     - Class: 114
       Script: {instanceID: 11276}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 11396}
     - Class: 114
       Script: {instanceID: 11536}
@@ -387,7 +557,54 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15026}
     - Class: 114
       Script: {instanceID: 15174}
+=======
+      Script: {instanceID: 11532}
+    - Class: 114
+      Script: {instanceID: 11614}
+    - Class: 114
+      Script: {instanceID: 11712}
+    - Class: 114
+      Script: {instanceID: 11730}
+    - Class: 114
+      Script: {instanceID: 11772}
+    - Class: 114
+      Script: {instanceID: 11850}
+    - Class: 114
+      Script: {instanceID: 12352}
+    - Class: 114
+      Script: {instanceID: 12538}
+    - Class: 114
+      Script: {instanceID: 12728}
+    - Class: 114
+      Script: {instanceID: 12770}
+    - Class: 114
+      Script: {instanceID: 12852}
+    - Class: 114
+      Script: {instanceID: 13012}
+    - Class: 114
+      Script: {instanceID: 13198}
+    - Class: 114
+      Script: {instanceID: 13358}
+    - Class: 114
+      Script: {instanceID: 13428}
+    - Class: 114
+      Script: {instanceID: 13598}
+    - Class: 114
+      Script: {instanceID: 13748}
+    - Class: 114
+      Script: {instanceID: 14164}
+    - Class: 114
+      Script: {instanceID: 14268}
+    - Class: 114
+      Script: {instanceID: 14962}
+    - Class: 114
+      Script: {instanceID: 15016}
+    - Class: 114
+      Script: {instanceID: 15164}
+>>>>>>> DieAndRetry
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -1140,7 +1357,17 @@ ScriptsOnlyBuild:
     className: AnimatedTile
   - hash:
       serializedVersion: 2
+<<<<<<< HEAD
       Hash: f8b48468a01d5cd09f9e761d197992ca
+=======
+      Hash: 1dee62b32a5f914a3f8f8768f3fc0673
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnRoom
+  - hash:
+      serializedVersion: 2
+      Hash: b66774d9ca8012704596337a3437984c
+>>>>>>> DieAndRetry
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerControler
@@ -2240,5 +2467,12 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu/PhotonLobby.unity
   - Assets/Scenes/Phase 1/TestCharacter.unity
+<<<<<<< HEAD
   - Assets/Scenes/D&R/Level 1-1.unity
   playerPath: D:/Code/Build/Studio Hoshigaru.exe
+=======
+  - Assets/Scenes/D&R/Level1.unity
+  - Assets/Scenes/D&R/Level2.unity
+  playerPath: C:/Users/burgb/Documents/Studio Hoshigaru/Studio-Hoshigaru/Studio Hoshigaru/Build/Studio
+    Hoshigaru.exe
+>>>>>>> DieAndRetry
