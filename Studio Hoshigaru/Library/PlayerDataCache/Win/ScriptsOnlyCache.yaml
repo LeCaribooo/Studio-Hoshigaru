@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - CanvasPlayerManager
     - ColliderEnemy
     - DeadState
+    - Destroy_this_object
     - EnemyController
     - EnemyGFX
     - EnemyHealth
@@ -69,11 +70,24 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
+    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
+    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    Unity.2D.Tilemap.Extras.Editor.dll:
+    - UnityEditor.Tilemaps.CoordinateBrush
+    - UnityEditor.Tilemaps.GameObjectBrush
+    - UnityEditor.Tilemaps.GroupBrush
+    - UnityEditor.Tilemaps.LineBrush
+    - UnityEditor.Tilemaps.RandomBrush
+    - UnityEditor.Tilemaps.TintBrush
+    - UnityEditor.Tilemaps.TintBrushSmooth
     Unity.2D.Tilemap.Extras.dll:
     - UnityEngine.Tilemaps.AnimatedTile
     Unity.Rider.Editor.dll:
@@ -574,7 +588,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15344}
     - Class: 114
-      Script: {instanceID: 15430}
+      Script: {instanceID: 15402}
+    - Class: 114
+      Script: {instanceID: 45670}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -964,7 +980,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 702dbc4b607caf0c765a688a7b824024
+      Hash: 57dc612db85b44c52906cc7670f9497f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player_portal
@@ -1468,7 +1484,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 855832a9f87b569ea5e0c53a1ace85fd
+      Hash: fa2173541ba6ee95ceff5a649d1a852b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyController
@@ -2726,6 +2742,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Destroy_this_object
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menu/PhotonLobby.unity
