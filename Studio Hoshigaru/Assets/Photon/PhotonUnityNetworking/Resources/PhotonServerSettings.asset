@@ -40,11 +40,11 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - IsTrigger
+  - PlayerReady
   - RespawnSpaceship
   - RPC_ChangeReadyState
   - SendMessage
   - VoteRPC
-  - PlayerReady
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
