@@ -502,11 +502,9 @@ MonoBehaviour:
   - {fileID: 855319861}
   - {fileID: 979139919}
   - {fileID: 871754332}
-  enemies:
-  - {fileID: 8091592278294108525, guid: 116d3fe9735173648ac36037b4a8c361, type: 3}
-  - {fileID: 7788710083642730289, guid: 75edefe58a42da24a81f6354a74d2620, type: 3}
-  nbenemies_EACH_MAX: 0100000001000000
-  nbenemies_EACH_MIN: 0100000001000000
+  enemies: []
+  nbenemies_EACH_MAX: 
+  nbenemies_EACH_MIN: 
 --- !u!1 &663507992
 GameObject:
   m_ObjectHideFlags: 0

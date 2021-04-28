@@ -9,6 +9,7 @@ using Photon.Realtime;
 public class Player_portal : MonoBehaviourPun
 {
     public GameObject Player;
+    public GameObject block;
     public Canvas Vote;
     public Canvas Level;
     public Canvas DecompteCanvas;
