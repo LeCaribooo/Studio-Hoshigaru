@@ -50,8 +50,10 @@ public class HotZoneCheck : MonoBehaviour
             enemyParent.triggerArea.SetActive(true);
             enemyParent.inRange = false;
             enemyParent.target = null;
-            enemyParent.Move();
-            enemyParent.attackMode = false;
+            if(enemyParent.cooling == false)
+            {
+                enemyParent.Move();
+            }
         }
     }
 }

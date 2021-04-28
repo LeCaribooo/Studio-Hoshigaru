@@ -75,12 +75,16 @@ public class Patroller : MonoBehaviour
         }
         healthbar.SetHealth(health.health);
         Death();
-        if (!attackMode && finishedAttack && !anim.GetCurrentAnimatorStateInfo(0).IsName("death"))
+        if (!attackMode && !cooling && finishedAttack && !anim.GetCurrentAnimatorStateInfo(0).IsName("death"))
         {
             Move();
         }
-
-        if(IsNearEdge() && target == null && finishedAttack && !anim.GetCurrentAnimatorStateInfo(0).IsName("death"))
+        if (cooling && finishedAttack && !anim.GetCurrentAnimatorStateInfo(0).IsName("death"))
+        {
+            anim.SetBool("attack", false);
+            Cooldown();
+        }
+        if (IsNearEdge() && target == null && finishedAttack && !anim.GetCurrentAnimatorStateInfo(0).IsName("death"))
         {
             if (facingDirection == LEFT)
             {
@@ -144,7 +148,7 @@ public class Patroller : MonoBehaviour
         dead = true;
     }
 
-    void EnemyLogic()
+    public void EnemyLogic()
     {
         if (target != null)
         {
@@ -209,10 +213,10 @@ public class Patroller : MonoBehaviour
     void Cooldown()
     {
         timer -= Time.deltaTime;
-
         if(timer <= 0 && cooling && attackMode)
         {
             cooling = false;
+            attackMode = false;
             timer = intTimer;
         }
     }

@@ -916,6 +916,7 @@ MonoBehaviour:
   hitbox: {fileID: 1620005525271795896}
   finishedAttack: 0
   dead: 0
+  attackMode: 0
   castPos: {fileID: 1620005525219524062}
   castJump: {fileID: 1620005526276346455}
   baseCastDist: 0.1
@@ -947,6 +948,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 7788710083642730292}
+  - {fileID: 7788710083642730290}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -987,7 +989,7 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: canWalk
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: death
   m_SynchronizeLayers:
   - SynchronizeType: 2
