@@ -46,13 +46,13 @@ public class PlayerControler : MonoBehaviour
     {
         DontDestroyOnLoad(this);
 
-        if (playerInstance == null)
+        if (playerInstance == null && PV.IsMine)
         {
             playerInstance = this;
         }
-        else
+        else if (PV.IsMine)
         {
-            DestroyObject(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
 
@@ -72,7 +72,6 @@ public class PlayerControler : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         PlayerSO();
-        PV = GetComponent<PhotonView>();
         playerDeath = GetComponent<PlayerDeath>();
         playerDeath.enabled = true;
         if (!PV.IsMine)

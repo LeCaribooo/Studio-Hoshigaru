@@ -55,8 +55,7 @@ public class EnemyController : MonoBehaviour
     {
         if (health.health <= 0)
         {
-            Destroy(this.gameObject);
-            GameObject.Find("DarkAngel").SetActive(false);
+            PhotonNetwork.Destroy(this.gameObject);
         }
     }
 

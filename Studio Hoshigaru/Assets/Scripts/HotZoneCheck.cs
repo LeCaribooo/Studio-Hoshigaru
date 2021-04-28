@@ -51,6 +51,7 @@ public class HotZoneCheck : MonoBehaviour
             enemyParent.inRange = false;
             enemyParent.target = null;
             enemyParent.Move();
+            enemyParent.attackMode = false;
         }
     }
 }

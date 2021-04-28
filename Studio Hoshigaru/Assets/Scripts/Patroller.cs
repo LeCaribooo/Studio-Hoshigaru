@@ -11,6 +11,7 @@ public class Patroller : MonoBehaviour
     public GameObject hitbox;
     public bool finishedAttack;
     public bool dead = false;
+    public bool attackMode;
     #region Patrolling
     [SerializeField]
     Transform castPos;
@@ -43,7 +44,7 @@ public class Patroller : MonoBehaviour
     #region Private Variables
     private Animator anim;
     private float distance;//distance du joueur par rapport à this
-    private bool attackMode;
+    
     
     private float intTimer;
     #endregion

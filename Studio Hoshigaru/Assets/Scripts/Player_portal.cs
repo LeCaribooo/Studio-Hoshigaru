@@ -24,14 +24,11 @@ public class Player_portal : MonoBehaviourPun
 
     private List<bool> playerReady = new List<bool>();
 
+    [SerializeField]
+    private string[] scene = new string[2];
 
     //Timer
-    float time = 21f;
-    
-    public enum Scene {
-        Level1,
-        Level2
-    }
+    float time = 21f;    
 
     GameObject getMinePlayer()
     {
@@ -116,12 +113,9 @@ public class Player_portal : MonoBehaviourPun
     public void LoadRandomRoom()
     {
         int nbLvl = Random.Range(0,2); //Je génère une scène aléatoire
-        Scene scene = (Scene)nbLvl; 
-        string lvl = scene.ToString(); //Je prend son string
-        
-        // A MOODIFIER
-        PhotonNetwork.LoadLevel("Level1");
-        Debug.Log("Room Loaded" + lvl );
+        string sceneload = scene[nbLvl];
+        PhotonNetwork.LoadLevel(sceneload);
+        Debug.Log("Room Loaded" );
     }
 
     public void SendNotif()
