@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
     private Animator animator;
     public bool cooling;
     public bool wait;
+    public GameObject Parent;
 
     public int maxHealth;
     // Start is called before the first frame update
@@ -55,7 +56,7 @@ public class EnemyController : MonoBehaviour
     {
         if (health.health <= 0)
         {
-            PhotonNetwork.Destroy(this.gameObject);
+            PhotonNetwork.Destroy(Parent);
         }
     }
 

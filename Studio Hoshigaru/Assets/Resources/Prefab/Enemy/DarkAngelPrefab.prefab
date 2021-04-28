@@ -233,6 +233,8 @@ MonoBehaviour:
   healthbar: {fileID: 8249583254787802149}
   health: {fileID: 1730445031459353289}
   enemySO: {fileID: 11400000, guid: 24e9a6bfa7ffee6428697809afd7fb51, type: 2}
+  cooling: 0
+  wait: 0
   maxHealth: 0
 --- !u!95 &-8471083787892578870
 Animator:

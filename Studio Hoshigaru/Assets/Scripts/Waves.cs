@@ -105,8 +105,10 @@ public class Waves : MonoBehaviour
         {
             Debug.Log("Spawn & Instantiate");
             int spawnPoint = Random.Range(0, spawnpoint.Length);
+            string name = mob.name;
+            Debug.Log("Mob name :" + name);
             PhotonNetwork.Instantiate
-                (Path.Combine("Prefab", "Enemy", "DarkAngelPrefab"), spawnpoint[spawnPoint].transform.position, Quaternion.identity);
+                (Path.Combine("Prefab", "Enemy", name), spawnpoint[spawnPoint].transform.position, Quaternion.identity);
 
         }
         

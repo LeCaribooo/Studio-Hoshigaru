@@ -673,7 +673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767854487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.91406, y: -24.004337, z: -351.60596}
+  m_LocalPosition: {x: -20.91406, y: -24.004337, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -725,9 +725,11 @@ MonoBehaviour:
   - {fileID: 246284977}
   - {fileID: 179437893}
   - {fileID: 53772310}
-  enemies: []
-  nbenemies_EACH_MAX: 
-  nbenemies_EACH_MIN: 
+  enemies:
+  - {fileID: 8091592278294108525, guid: 116d3fe9735173648ac36037b4a8c361, type: 3}
+  - {fileID: 7788710083642730289, guid: 75edefe58a42da24a81f6354a74d2620, type: 3}
+  nbenemies_EACH_MAX: 0100000001000000
+  nbenemies_EACH_MIN: 0100000001000000
 --- !u!4 &812914993
 Transform:
   m_ObjectHideFlags: 0
@@ -736,7 +738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812914991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.8157876, y: 2.1608438, z: -354.49286}
+  m_LocalPosition: {x: 3.8157876, y: 2.1608438, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1532077637}
