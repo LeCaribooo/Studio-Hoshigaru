@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using System.IO;
 
 public class Shuriken : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Shuriken : MonoBehaviour
     private PlayerControler playerControler;
     public int numberOfShuriken;
     public Animator animator;
+    public PhotonView PV;
+
 
     private void Start()
     {
@@ -28,21 +31,24 @@ public class Shuriken : MonoBehaviour
     }
 
     void Update()
-    { 
-        if(Input.GetMouseButtonDown(0) && numberOfShuriken > 0)
+    {
+        if (PV.IsMine)
         {
-            SetAttackStatus(1);
-        }
-        if (Input.GetMouseButtonDown(1) && numberOfShuriken > 0 && animator.GetInteger("AttackStatus") == 0)
-        {
-            numberOfShuriken--;
-            if (!playerControler.facingRight)
+            if (Input.GetMouseButtonDown(0) && numberOfShuriken > 0)
             {
-                Instantiate(shuriken, new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z), transform.rotation);
+                SetAttackStatus(1);
             }
-            else
+            if (Input.GetMouseButtonDown(1) && numberOfShuriken > 0 && animator.GetInteger("AttackStatus") == 0)
             {
-                Instantiate(shuriken, new Vector3(transform.position.x - 0.5f, transform.position.y, transform.position.z), transform.rotation);
+                numberOfShuriken--;
+                if (!playerControler.facingRight)
+                {
+                    PhotonNetwork.Instantiate(Path.Combine("Prefab", "Player", shuriken.name), new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z), transform.rotation);
+                }
+                else
+                {
+                    PhotonNetwork.Instantiate(Path.Combine("Prefab", "Player", shuriken.name), new Vector3(transform.position.x - 0.5f, transform.position.y, transform.position.z), transform.rotation);
+                }
             }
         }
     }

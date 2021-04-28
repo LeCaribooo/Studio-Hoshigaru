@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Photon.Pun;
 using UnityEngine;
-using Photon.Pun;
 
 
 public class Sword : MonoBehaviour
@@ -59,7 +57,7 @@ public class Sword : MonoBehaviour
         //On met à jour la hitbox d'attaque
         if(time > 0.15)
         {
-            PV.RPC("AttackEnabled", RpcTarget.All, false);
+            /*PV.RPC("AttackEnabled", RpcTarget.All, false);*/
         }       
     }
 
@@ -67,14 +65,14 @@ public class Sword : MonoBehaviour
     {
         time = 0;
         this.attackStatus = attackStatus;
-        if(update)
-            PV.RPC("AttackEnabled", RpcTarget.All, true);
+        /*if(update)
+            PV.RPC("AttackEnabled", RpcTarget.All, true);*/
         animator.SetInteger("AttackStatus", attackStatus);
     }
 
-    [PunRPC]
+    /*[PunRPC]
     void AttackEnabled(bool isEnable)
     {
         attackHitboxCollider.enabled = isEnable;
-    }
+    }*/
 }

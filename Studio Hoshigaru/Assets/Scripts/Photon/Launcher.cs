@@ -19,6 +19,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject roomListPrefab;
     [SerializeField] GameObject playerListPrefab;
     [SerializeField] Text readyUpText;
+    [SerializeField] Text playerNameText;
 
     private List<PlayerListItem> playerList = new List<PlayerListItem>();
 
@@ -45,7 +46,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        MenuManager.Instance.OpenMenu("title");
+        MenuManager.Instance.OpenMenu("main");
         Debug.Log("Joined Lobby");
     }
 
@@ -169,6 +170,11 @@ public class Launcher : MonoBehaviourPunCallbacks
         int index = playerList.FindIndex(x => x.player == player);
         if (index != -1)
             playerList[index].Ready = ready;
+    }
+
+    public void OnClick_ValidButton()
+    {
+        PhotonNetwork.NickName = playerNameText.text;
     }
 
 }

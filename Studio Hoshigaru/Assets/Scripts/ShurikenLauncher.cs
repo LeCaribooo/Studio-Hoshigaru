@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class ShurikenLauncher : MonoBehaviour
+public class ShurikenLauncher : MonoBehaviourPun
 {
     bool go;
 
@@ -13,10 +13,10 @@ public class ShurikenLauncher : MonoBehaviour
     Vector2 locationInFrontOfPlayer;
     PlayerControler playerControler;
     Shuriken shuriken;
+    public PhotonView PV;
 
     void Start()
     {
-
         players = GameObject.FindGameObjectsWithTag("Player");
         go = false;
         player = getPlayer();
@@ -32,7 +32,6 @@ public class ShurikenLauncher : MonoBehaviour
         {
             locationInFrontOfPlayer = new Vector2(player.transform.position.x - 5, player.transform.position.y);
         }
-        
 
         StartCoroutine(Boom());
     }
@@ -56,30 +55,38 @@ public class ShurikenLauncher : MonoBehaviour
 
     void Update()
     {
-        itemToRotate.transform.Rotate(0, 0, Time.deltaTime * 500);
-
-        if (go)
+        if (PV.IsMine)
         {
-            transform.position = Vector2.MoveTowards(transform.position, locationInFrontOfPlayer, Time.deltaTime * 15);
-        }
-        if (!go)
-        {
-            if (!playerControler.facingRight) 
-            {
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.transform.position.x + 0.5f, player.transform.position.y), Time.deltaTime * 15);
-            }
-            else
-            {
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.transform.position.x - 0.5f, player.transform.position.y), Time.deltaTime * 15);
-            }
-            
-        }
+            itemToRotate.transform.Rotate(0, 0, Time.deltaTime * 500);
 
-        if(!go && Vector2.Distance(player.transform.position, transform.position) <= 0.5f)
+            if (go)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, locationInFrontOfPlayer, Time.deltaTime * 15);
+            }
+            if (!go)
+            {
+                if (!playerControler.facingRight)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.transform.position.x + 0.5f, player.transform.position.y), Time.deltaTime * 15);
+                }
+                else
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.transform.position.x - 0.5f, player.transform.position.y), Time.deltaTime * 15);
+                }
+            }
+        }
+        if (!go && Vector2.Distance(player.transform.position, transform.position) <= 0.5f)
         {
             shuriken.numberOfShuriken++;
-            shuriken.gameObject.SetActive(true);
-            Destroy(this.gameObject);
+            base.photonView.RPC("SetGameObjectActive", RpcTarget.All, true);
+            PhotonNetwork.Destroy(this.gameObject);
         }
+
+    }
+
+    [PunRPC]
+    void SetGameObjectActive(bool isActive)
+    {
+        shuriken.gameObject.SetActive(isActive);
     }
 }

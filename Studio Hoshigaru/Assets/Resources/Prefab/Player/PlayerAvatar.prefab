@@ -2358,6 +2358,7 @@ GameObject:
   - component: {fileID: 583994878253416157}
   - component: {fileID: 4311035452467185744}
   - component: {fileID: 32338171593278466}
+  - component: {fileID: 2099521485967031025}
   m_Layer: 0
   m_Name: Shuriken
   m_TagString: Untagged
@@ -2446,6 +2447,29 @@ MonoBehaviour:
     type: 3}
   numberOfShuriken: 1
   animator: {fileID: -5369199426318173991}
+  PV: {fileID: 2099521485967031025}
+--- !u!114 &2099521485967031025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5802383189979455064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 0
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &6226543735186680800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2870,6 +2894,7 @@ GameObject:
   - component: {fileID: 1403711499839992626}
   - component: {fileID: 1618717404291332973}
   - component: {fileID: 3098516444043262116}
+  - component: {fileID: 8577079195434782081}
   m_Layer: 5
   m_Name: WeaponSelection
   m_TagString: Untagged
@@ -2951,9 +2976,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: -5369199426318173991}
   sword: {fileID: 7937325267349778541}
-  bow: {fileID: 3575396673422234280}
+  bow: {fileID: 3641223025752236751}
   shuriken: {fileID: 1190689625883642452}
   hammer: {fileID: 1872936827306804595}
+  actualWeapon: {fileID: 0}
+--- !u!114 &8577079195434782081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7359470005096580461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 0
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &7730880062772989538
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,7 +3082,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1101689217889927654}
   - component: {fileID: 904778794712758169}
-  - component: {fileID: 2934379518759446204}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -3070,32 +3117,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83524959c629a0b439514572689d0ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PV: {fileID: 2934379518759446204}
+  PV: {fileID: -5198743702041084537}
   attackHitboxCollider: {fileID: 3609517798834878423}
   animator: {fileID: -5369199426318173991}
   canAttack: 0
---- !u!114 &2934379518759446204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7937325267349778541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 0
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  viewIdField: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &8596134874343435271
 GameObject:
   m_ObjectHideFlags: 0
@@ -3641,7 +3666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9079673082573814826}
   m_LocalRotation: {x: 0, y: 0, z: -0.9841492, w: 0.1773424}
-  m_LocalPosition: {x: 0.156, y: -0.507, z: -0.002}
+  m_LocalPosition: {x: 0.156, y: -0.507, z: 0}
   m_LocalScale: {x: 1, y: 1.33111, z: 1}
   m_Children: []
   m_Father: {fileID: 1101689217889927654}

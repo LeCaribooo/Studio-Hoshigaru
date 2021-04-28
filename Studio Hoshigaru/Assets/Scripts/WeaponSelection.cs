@@ -1,26 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class WeaponSelection : MonoBehaviour
+public class WeaponSelection : MonoBehaviourPun
 {
     [SerializeField] private Animator animator;
-    [SerializeField] private GameObject sword;
-    [SerializeField] private GameObject bow;
-    [SerializeField] private GameObject shuriken;
-    [SerializeField] private GameObject hammer;
-    private GameObject actualWeapon = null;
+    [SerializeField] public GameObject sword;
+    [SerializeField] public GameObject bow;
+    [SerializeField] public GameObject shuriken;
+    [SerializeField] public GameObject hammer;
+    public GameObject actualWeapon = null;
     private string actualWeaponString = "";
 
     public void selectSword()
     {
         if (actualWeaponString == "hasSword")
             return;
-        sword.SetActive(true);
+        base.photonView.RPC("SetSwordActive", RpcTarget.All, true);
         animator.SetBool("hasSword", true);
         if (actualWeaponString != "")
         {
-            actualWeapon.SetActive(false);
+            base.photonView.RPC("SetActualActive", RpcTarget.All, false);
             animator.SetBool(actualWeaponString, false);
         }
         actualWeapon = sword;
@@ -31,11 +32,11 @@ public class WeaponSelection : MonoBehaviour
     {
         if (actualWeaponString == "hasBow")
             return;
-        bow.SetActive(true);
+        base.photonView.RPC("SetBowActive", RpcTarget.All, true);
         animator.SetBool("hasBow", true);
         if (actualWeaponString != "")
         {
-            actualWeapon.SetActive(false);
+            base.photonView.RPC("SetActualActive", RpcTarget.All, false);
             animator.SetBool(actualWeaponString, false);
         }   
         actualWeapon = bow;
@@ -46,11 +47,11 @@ public class WeaponSelection : MonoBehaviour
     {
         if (actualWeaponString == "hasShuriken")
             return;
-        shuriken.SetActive(true);
+        base.photonView.RPC("SetShurikenActive", RpcTarget.All, true);
         animator.SetBool("hasShuriken", true);
         if (actualWeaponString != "")
         {
-            actualWeapon.SetActive(false);
+            base.photonView.RPC("SetActualActive", RpcTarget.All, false);
             animator.SetBool(actualWeaponString, false);
         }
         actualWeapon = shuriken;
@@ -61,14 +62,50 @@ public class WeaponSelection : MonoBehaviour
     {
         if (actualWeaponString == "hasHammer")
             return;
-        hammer.SetActive(true);
+        base.photonView.RPC("SetHammerActive", RpcTarget.All, true);
         animator.SetBool("hasHammer", true);
         if (actualWeaponString != "")
         {
-            actualWeapon.SetActive(false);
+            base.photonView.RPC("SetActualActive", RpcTarget.All, false);
             animator.SetBool(actualWeaponString, false);
         }
         actualWeapon = hammer;
         actualWeaponString = "hasHammer";
     }
+
+    [PunRPC]
+    public void SetSwordActive(bool isActive)
+    {
+        sword.SetActive(isActive);
+    }
+
+    [PunRPC]
+    public void SetBowActive(bool isActive)
+    {
+        bow.SetActive(isActive);
+    }
+    
+    [PunRPC]
+    public void SetShurikenActive(bool isActive)
+    {
+        shuriken.SetActive(isActive);
+    }
+
+    [PunRPC]
+    public void SetHammerActive(bool isActive)
+    {
+        hammer.SetActive(isActive);
+    }
+
+    [PunRPC]
+    public void SetActualActive(bool isActive)
+    {
+        actualWeapon.SetActive(isActive);
+    }
+
+
+
+
 }
+
+
