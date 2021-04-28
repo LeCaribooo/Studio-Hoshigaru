@@ -45,6 +45,13 @@ MonoBehaviour:
   - RPC_ChangeReadyState
   - SendMessage
   - VoteRPC
+  - SetActive
+  - SetGameObjectActive
+  - SetSwordActive
+  - SetBowActive
+  - SetHammerActive
+  - SetShurikenActive
+  - SetActualActive
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

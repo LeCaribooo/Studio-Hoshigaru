@@ -175,4 +175,5 @@ public class PlayerControler : MonoBehaviour
             Physics2D.IgnoreCollision(hitbox, other);
         }
     }
+
 }
