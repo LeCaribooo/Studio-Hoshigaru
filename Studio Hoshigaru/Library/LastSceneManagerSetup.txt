@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Menu/PhotonLobby.unity
+- path: Assets/Scenes/Phase 1/TestCharacter.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
