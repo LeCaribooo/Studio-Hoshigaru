@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1620005524645509595}
   - component: {fileID: 1620005524645509594}
   - component: {fileID: 1620005524645509593}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1620005524688401705}
   - component: {fileID: 1620005524688401706}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: patroller_sprites
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 1620005524730348317}
   - component: {fileID: 1620005524730348316}
   - component: {fileID: 1620005524730348315}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: triggerArea
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -263,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1620005525219524062}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: castPos
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -295,13 +295,13 @@ GameObject:
   - component: {fileID: 1620005525271795899}
   - component: {fileID: 1620005525271795898}
   - component: {fileID: 1620005525271795897}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: hitBox
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1620005525271795899
 Transform:
   m_ObjectHideFlags: 0
@@ -323,7 +323,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620005525271795896}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d4dddd80ee1ac4cbc178b97a9e4207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 3
 --- !u!1 &1620005525494345298
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 1620005525494345299}
   - component: {fileID: 1620005525494345301}
   - component: {fileID: 1620005525494345300}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 1620005525532884152}
   - component: {fileID: 1620005525532877639}
   - component: {fileID: 1620005525532877638}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: hotZone
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 1620005525568824379}
   - component: {fileID: 1620005525568824381}
   - component: {fileID: 1620005525568824380}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 1620005525826760505}
   - component: {fileID: 1620005525826760507}
   - component: {fileID: 1620005525826760506}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: patroller_colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 1620005526248979527}
   - component: {fileID: 1620005526248979526}
   - component: {fileID: 1620005526248979525}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -741,7 +741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1620005526276346455}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: canJump
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
@@ -779,7 +779,10 @@ GameObject:
   - component: {fileID: 7788710083642730292}
   - component: {fileID: 7788710083642730290}
   - component: {fileID: 7788710083642730291}
-  m_Layer: 10
+  - component: {fileID: 5331833850057047466}
+  - component: {fileID: 5767294053280164471}
+  - component: {fileID: 6490033299691850484}
+  m_Layer: 0
   m_Name: patroller
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -886,7 +889,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -911,19 +914,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthbar: {fileID: 1620005524645509593}
-  Maxhealth: 24
+  Maxhealth: 18
   health: {fileID: 7788710083642730291}
   hitbox: {fileID: 1620005525271795896}
   finishedAttack: 0
   dead: 0
   attackMode: 0
+  alreadyAttacked: 0
   castPos: {fileID: 1620005525219524062}
   castJump: {fileID: 1620005526276346455}
   baseCastDist: 0.1
   downCastDist: 1.8
   attackDistance: 1.3
   movementSpeed: 2
-  timer: 2
+  timer: 3
   target: {fileID: 0}
   inRange: 0
   hotZone: {fileID: 1620005525532877637}
@@ -1007,3 +1011,128 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+--- !u!70 &5331833850057047466
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7788710083642730289}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.075}
+  m_Size: {x: 0.25, y: 0.4}
+  m_Direction: 0
+--- !u!114 &5767294053280164471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7788710083642730289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c19b40ac42e4a844bd6570c76b02dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rdb2: {fileID: 0}
+--- !u!82 &6490033299691850484
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7788710083642730289}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d2141fd493bccb646b5bdd3af64a1372, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

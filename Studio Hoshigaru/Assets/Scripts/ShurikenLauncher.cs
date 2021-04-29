@@ -14,6 +14,7 @@ public class ShurikenLauncher : MonoBehaviourPun
     PlayerControler playerControler;
     Shuriken shuriken;
     public PhotonView PV;
+    public bool facingRight = false;
 
     void Start()
     {

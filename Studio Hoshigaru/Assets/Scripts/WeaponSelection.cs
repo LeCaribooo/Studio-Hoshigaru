@@ -11,7 +11,7 @@ public class WeaponSelection : MonoBehaviourPun
     [SerializeField] public GameObject shuriken;
     [SerializeField] public GameObject hammer;
     public GameObject actualWeapon = null;
-    private string actualWeaponString = "";
+    public string actualWeaponString = "";
 
     public void selectSword()
     {

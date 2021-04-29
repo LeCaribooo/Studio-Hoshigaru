@@ -21,6 +21,7 @@ public class PlayerDeath : MonoBehaviour
     {
         if (PV.IsMine)
         {
+            Debug.Log(health.numOfHits);
             Death();
         }
     }

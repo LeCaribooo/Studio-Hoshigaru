@@ -1565,6 +1565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b30b7085bce4b46ba88a232db2d838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 4073380840126637068}
+  dmg: 2
 --- !u!1 &4073380840126637068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,6 +1587,7 @@ GameObject:
   - component: {fileID: -1651932559430037487}
   - component: {fileID: 8745890432335679496}
   - component: {fileID: -5528596187562312331}
+  - component: {fileID: 3682850726022668923}
   m_Layer: 0
   m_Name: PlayerAvatar
   m_TagString: Player
@@ -1888,6 +1891,102 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0065357685, y: -0.08054137}
   m_Size: {x: 0.34305415, y: 0.8362133}
   m_Direction: 0
+--- !u!82 &3682850726022668923
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073380840126637068}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4267987911791588897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,6 +1998,7 @@ GameObject:
   - component: {fileID: 8398320623659986147}
   - component: {fileID: 6921377215012991503}
   - component: {fileID: 3609517798834878423}
+  - component: {fileID: 357143876520383550}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -1977,7 +2077,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4267987911791588897}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1996,6 +2096,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.11848448, y: 0.3677909}
   m_EdgeRadius: 0
+--- !u!114 &357143876520383550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4267987911791588897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b30b7085bce4b46ba88a232db2d838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 4073380840126637068}
+  dmg: 3
 --- !u!1 &4389406916077254573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,6 +3094,7 @@ MonoBehaviour:
   shuriken: {fileID: 1190689625883642452}
   hammer: {fileID: 1872936827306804595}
   actualWeapon: {fileID: 0}
+  actualWeaponString: 
 --- !u!114 &8577079195434782081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3041,7 +3156,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7730880062772989538}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -3072,6 +3187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b30b7085bce4b46ba88a232db2d838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 4073380840126637068}
+  dmg: 5
 --- !u!1 &7937325267349778541
 GameObject:
   m_ObjectHideFlags: 0

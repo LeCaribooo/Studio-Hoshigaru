@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60725927aeaec04429ce2cae7492afda, type: 3}
   m_Name: EnemySO
   m_EditorClassIdentifier: 
-  health: 20
+  health: 12
   damage: 3

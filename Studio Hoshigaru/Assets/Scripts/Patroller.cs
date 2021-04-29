@@ -12,6 +12,8 @@ public class Patroller : MonoBehaviour
     public bool finishedAttack;
     public bool dead = false;
     public bool attackMode;
+    public bool alreadyAttacked;
+    public AudioSource source;
     #region Patrolling
     [SerializeField]
     Transform castPos;
@@ -55,6 +57,7 @@ public class Patroller : MonoBehaviour
         health.health = Maxhealth;
         healthbar.SetMaxHealth(health.health);
         finishedAttack = true;
+        source = GetComponent<AudioSource>();
     }
     private void Awake()
     {
@@ -118,16 +121,6 @@ public class Patroller : MonoBehaviour
         {
             EnemyLogic();
         }
-    }
-
-    public void Hit()
-    {
-        hitbox.SetActive(true);
-    }
-
-    public void StopHit()
-    {
-        hitbox.SetActive(false);
     }
 
     public void Death()
@@ -218,6 +211,7 @@ public class Patroller : MonoBehaviour
             cooling = false;
             attackMode = false;
             timer = intTimer;
+            alreadyAttacked = false;
         }
     }
 

@@ -43,11 +43,13 @@ public class Shuriken : MonoBehaviour
                 numberOfShuriken--;
                 if (!playerControler.facingRight)
                 {
-                    PhotonNetwork.Instantiate(Path.Combine("Prefab", "Player", shuriken.name), new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z), transform.rotation);
+                    GameObject shushu = PhotonNetwork.Instantiate(Path.Combine("Prefab", "Player", shuriken.name), new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z), transform.rotation);
+                    shushu.GetComponent<ShurikenLauncher>().facingRight = false;
                 }
                 else
                 {
-                    PhotonNetwork.Instantiate(Path.Combine("Prefab", "Player", shuriken.name), new Vector3(transform.position.x - 0.5f, transform.position.y, transform.position.z), transform.rotation);
+                    GameObject shushu = PhotonNetwork.Instantiate(Path.Combine("Prefab", "Player", shuriken.name), new Vector3(transform.position.x - 0.5f, transform.position.y, transform.position.z), transform.rotation);
+                    shushu.GetComponent<ShurikenLauncher>().facingRight = true;
                 }
             }
         }

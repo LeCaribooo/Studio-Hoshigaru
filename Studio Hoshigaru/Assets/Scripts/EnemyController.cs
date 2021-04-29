@@ -16,6 +16,7 @@ public class EnemyController : MonoBehaviour
     public bool cooling;
     public bool wait;
     public GameObject Parent;
+    public AudioSource source;
 
     public int maxHealth;
     // Start is called before the first frame update
@@ -27,6 +28,8 @@ public class EnemyController : MonoBehaviour
         healthbar.SetMaxHealth(health.health);
         animator = GetComponent<Animator>();
         cooling = true;
+        source = GetComponentInParent<AudioSource>();
+        source.Play();
     }
     private void FixedUpdate()
     {
@@ -48,7 +51,7 @@ public class EnemyController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Attack(other);
-        
+        Debug.Log("attack again");
     }
 
     [PunRPC]
@@ -82,6 +85,6 @@ public class EnemyController : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         wait = true;
-        Debug.Log("attack again");
+        
     }
 }
